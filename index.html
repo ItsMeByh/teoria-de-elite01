@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090c">
+<title>Teoria de Elite</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-g="a">
+<header>
+  <a class="marca" href="#/">Teoria de Elite</a>
+  <button id="mb" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+  <nav id="nav">
+    <a href="#/painel">Painel</a>
+    <a href="#/jornada">Curso</a>
+    <a href="#/historia">História</a>
+    <a href="#/materiais">Materiais</a>
+    <a href="#/avaliacoes">Avaliações</a>
+    <a href="#/progresso">Progresso</a>
+    <a href="#/ia">Ajuda</a>
+    <a href="#/sobre">Sobre</a>
+    <a id="nadmin" href="#/admin" hidden>Admin</a>
+    <a id="nsair" href="#" data-x="sair" hidden>Sair</a>
+  </nav>
+</header>
+<main id="app"></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
