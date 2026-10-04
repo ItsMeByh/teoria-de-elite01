@@ -36,7 +36,21 @@ const LESSONS = [
     quiz: [{ q: "Qual nota vem depois do Si?", o: ["Lá", "Dó (uma oitava acima)", "Fá"], c: 1 },
            { q: "Na cifra, Sol é representado por…", o: ["G", "C", "A"], c: 0 }] },
   { id: 5, etapa: 2, titulo: "Pentagrama" },
-  { id: 6, etapa: 2, titulo: "Clave de Sol" },
+ { id: 6, etapa: 2, titulo: "Clave de Sol",
+  objetivo: "Entender o que é a Clave de Sol e como ela ajuda a identificar as notas no pentagrama.",
+  corpo: [
+    "A Clave de Sol é um símbolo colocado no início do pentagrama. Ela indica a posição das notas e é muito utilizada para representar sons médios e agudos.",
+    "O centro da Clave de Sol envolve a segunda linha do pentagrama. Essa linha representa a nota Sol.",
+    "A partir do Sol podemos descobrir as outras notas seguindo a sequência: Dó, Ré, Mi, Fá, Sol, Lá e Si.",
+    "Nas linhas do pentagrama, de baixo para cima, encontramos: Mi, Sol, Si, Ré e Fá. Nos espaços encontramos: Fá, Lá, Dó e Mi."
+  ],
+  resumo: "A Clave de Sol indica que a segunda linha do pentagrama representa a nota Sol e é muito usada para sons médios e agudos.",
+  quiz: [
+    { q: "Qual linha do pentagrama representa a nota Sol na Clave de Sol?", o: ["Primeira", "Segunda", "Terceira", "Quinta"], c: 1 },
+    { q: "Quais são as notas das linhas na Clave de Sol, de baixo para cima?", o: ["Mi, Sol, Si, Ré, Fá", "Fá, Lá, Dó, Mi, Sol", "Dó, Ré, Mi, Fá, Sol", "Sol, Lá, Si, Dó, Ré"], c: 0 },
+    { q: "A Clave de Sol é muito utilizada para representar sons...", o: ["Somente graves", "Médios e agudos", "Somente percussivos", "Sem altura definida"], c: 1 }
+  ]
+},
   { id: 7, etapa: 2, titulo: "Clave de Fá" },
   { id: 8, etapa: 2, titulo: "Leitura das Notas" },
   { id: 9, etapa: 3, titulo: "Figuras Musicais" },
