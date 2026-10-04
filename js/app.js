@@ -10,7 +10,7 @@ const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const nivel = () => Math.min(Math.floor(S.xp / 100), 4);
 const pct = () => Math.round(S.feitas.length / LESSONS.length * 100);
-const livre = l => l.id === 1 || S.feitas.includes(l.id - 1);
+const livre = l => l.id <= 10 || S.feitas.includes(l.id - 1);
 const guia = m => `<div class="guia"><span class="sel">TE</span><p>${m}</p></div>`;
 const barra = p => `<div class="barra"><i style="width:${p}%"></i></div>`;
 const stat = (v, l) => `<div class="card stat"><b>${v}</b><span>${l}</span></div>`;
