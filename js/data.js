@@ -35,7 +35,21 @@ const LESSONS = [
     resumo: "Sete notas em ciclo: Dó Ré Mi Fá Sol Lá Si.",
     quiz: [{ q: "Qual nota vem depois do Si?", o: ["Lá", "Dó (uma oitava acima)", "Fá"], c: 1 },
            { q: "Na cifra, Sol é representado por…", o: ["G", "C", "A"], c: 0 }] },
-  { id: 5, etapa: 2, titulo: "Pentagrama" },
+{ id: 5, etapa: 2, titulo: "Pentagrama",
+  objetivo: "Entender o que é o pentagrama e como ele é usado para escrever música.",
+  corpo: [
+    "O pentagrama, também chamado de pauta musical, é o conjunto de cinco linhas horizontais e quatro espaços onde escrevemos as notas e outros símbolos musicais.",
+    "As linhas e os espaços são contados sempre de baixo para cima.",
+    "Cada linha e cada espaço pode representar uma nota diferente. Para saber exatamente quais notas eles representam, usamos uma clave, como a Clave de Sol ou a Clave de Fá.",
+    "Quando uma nota é muito grave ou muito aguda para caber no pentagrama, podemos usar pequenas linhas extras chamadas linhas suplementares."
+  ],
+  resumo: "O pentagrama possui 5 linhas e 4 espaços, contados de baixo para cima, e serve como base para a escrita musical.",
+  quiz: [
+    { q: "Quantas linhas possui um pentagrama?", o: ["4", "5", "6", "7"], c: 1 },
+    { q: "Quantos espaços existem entre as linhas do pentagrama?", o: ["3", "4", "5", "6"], c: 1 },
+    { q: "Como contamos as linhas e os espaços do pentagrama?", o: ["De cima para baixo", "Da direita para a esquerda", "De baixo para cima", "Não existe uma ordem"], c: 2 }
+  ]
+},
  { id: 6, etapa: 2, titulo: "Clave de Sol",
   objetivo: "Entender o que é a Clave de Sol e como ela ajuda a identificar as notas no pentagrama.",
   corpo: [
