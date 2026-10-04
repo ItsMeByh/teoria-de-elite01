@@ -65,7 +65,7 @@ ${STAGES.map(e => {
   const ls = LESSONS.filter(l => l.etapa === e.id), f = ls.filter(l => S.feitas.includes(l.id)).length, at = proxima();
   return `<div class="etapa"><header><p class="mute">Etapa ${String(e.id).padStart(2, "0")}${ls.length ? ` · ${f}/${ls.length}` : ""}</p><h3>${e.nome}</h3><p class="mute">${e.desc}</p></header>
 <div class="trilha">${ls.map(l => {
-    const feita = S.feitas.includes(l.id), ab = livre(l), st = feita ? "feita" : at && at.id === l.id ? "atual" : ab ? "" : "bloq";
+const feita = S.feitas.includes(l.id), ab = livre(l), st = feita ? "feita" : l.id <= 10 ? "disponivel" : "bloq";
     return `<a class="lic ${st}" ${ab ? `href="#/aula/${l.id}"` : `aria-disabled="true"`}><span>${String(l.id).padStart(2, "0")}</span><span>${l.titulo}</span><small>${feita ? "Concluída" : !ab ? "Bloqueada" : l.corpo ? "Disponível" : "Em preparação"}</small></a>`;
   }).join("")}</div></div>`;
 }).join("")}</section>`;
