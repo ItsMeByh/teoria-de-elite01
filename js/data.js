@@ -102,7 +102,29 @@ const LESSONS = [
     { q: "O que precisamos observar primeiro para identificar uma nota no pentagrama?", o: ["A velocidade", "A intensidade", "A clave", "O instrumento"], c: 2 }
   ]
 },
-  { id: 9, etapa: 3, titulo: "Figuras Musicais" },
+ { id: 9, etapa: 3, titulo: "Figuras Musicais",
+  objetivo: "Conhecer as figuras musicais e compreender como elas representam a duração dos sons.",
+  corpo: [
+    "As figuras musicais são símbolos utilizados na escrita musical para representar a duração dos sons.",
+    "Cada figura indica quanto tempo uma nota deve durar em relação às outras figuras.",
+    "As principais figuras musicais são: semibreve, mínima, semínima, colcheia, semicolcheia, fusa e semifusa.",
+    "A semibreve é a figura de maior duração entre essas sete. Em uma divisão binária, ela equivale a duas mínimas, quatro semínimas ou oito colcheias.",
+    "A mínima vale metade de uma semibreve e equivale a duas semínimas.",
+    "A semínima vale metade de uma mínima e equivale a duas colcheias.",
+    "A colcheia vale metade de uma semínima e equivale a duas semicolcheias.",
+    "A semicolcheia equivale a duas fusas, e cada fusa equivale a duas semifusas.",
+    "Em um compasso 4/4, tomando a semínima como unidade de tempo, a semibreve dura quatro tempos, a mínima dois tempos, a semínima um tempo e a colcheia meio tempo.",
+    "Exercício: bata quatro palmas com intervalos iguais. Cada intervalo representa um tempo. Agora imagine uma semibreve sustentada durante os quatro tempos."
+  ],
+  resumo: "As figuras musicais representam a duração dos sons. Cada figura vale o dobro da figura seguinte: semibreve, mínima, semínima, colcheia, semicolcheia, fusa e semifusa.",
+  quiz: [
+    { q: "Qual é a função das figuras musicais?", o: ["Indicar somente a altura", "Representar a duração dos sons", "Indicar o nome do instrumento", "Determinar a clave"], c: 1 },
+    { q: "Quantas semínimas equivalem a uma semibreve?", o: ["2", "4", "6", "8"], c: 1 },
+    { q: "Quantas colcheias equivalem a uma semínima?", o: ["1", "2", "3", "4"], c: 1 },
+    { q: "Em um compasso 4/4, quantos tempos dura uma mínima?", o: ["1", "2", "3", "4"], c: 1 },
+    { q: "Qual figura possui metade da duração de uma colcheia?", o: ["Mínima", "Semibreve", "Semicolcheia", "Semínima"], c: 2 }
+  ]
+},
   { id: 10, etapa: 3, titulo: "Pausas Musicais" },
   { id: 11, etapa: 3, titulo: "Pulso e Ritmo" },
   { id: 12, etapa: 3, titulo: "Compasso e Barra de Compasso" },
