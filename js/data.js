@@ -125,7 +125,30 @@ const LESSONS = [
     { q: "Qual figura possui metade da duração de uma colcheia?", o: ["Mínima", "Semibreve", "Semicolcheia", "Semínima"], c: 2 }
   ]
 },
-  { id: 10, etapa: 3, titulo: "Pausas Musicais" },
+ { id: 10, etapa: 3, titulo: "Pausas Musicais",
+  objetivo: "Compreender o que são as pausas musicais, suas durações e sua importância na leitura de partituras.",
+  corpo: [
+    "As pausas musicais são símbolos que representam momentos de silêncio durante uma música.",
+    "Assim como as figuras musicais representam a duração dos sons, as pausas indicam quanto tempo devemos permanecer em silêncio.",
+    "Cada figura musical possui uma pausa correspondente com a mesma duração.",
+    "A pausa de semibreve representa um silêncio equivalente à duração de uma semibreve. Em um compasso 4/4, ela corresponde a quatro tempos.",
+    "A pausa de mínima equivale à duração de uma mínima. Em um compasso 4/4, corresponde a dois tempos.",
+    "A pausa de semínima corresponde a um tempo em um compasso 4/4.",
+    "A pausa de colcheia corresponde a meio tempo, enquanto a pausa de semicolcheia corresponde a um quarto de tempo, considerando a semínima como unidade de tempo.",
+    "Também existem pausas de fusa e semifusa, que representam silêncios ainda mais curtos.",
+    "As pausas são importantes porque organizam o ritmo, criam momentos de silêncio e permitem que a música tenha respiração e expressão.",
+    "Exercício prático: conte 1, 2, 3, 4 em voz alta. Bata palmas nos tempos 1 e 3 e permaneça em silêncio nos tempos 2 e 4.",
+    "Agora experimente alternar dois tempos de som com dois tempos de silêncio, mantendo sempre a mesma velocidade."
+  ],
+  resumo: "As pausas musicais representam períodos de silêncio. Cada pausa possui a mesma duração de sua figura musical correspondente. Elas ajudam a organizar o ritmo e a expressão musical.",
+  quiz: [
+    { q: "O que representam as pausas musicais?", o: ["A altura das notas", "Momentos de silêncio", "A velocidade da música", "O volume dos instrumentos"], c: 1 },
+    { q: "Em um compasso 4/4, quantos tempos corresponde uma pausa de mínima?", o: ["1", "2", "3", "4"], c: 1 },
+    { q: "Qual pausa corresponde à duração de uma semínima?", o: ["Pausa de mínima", "Pausa de colcheia", "Pausa de semínima", "Pausa de semibreve"], c: 2 },
+    { q: "Em um compasso 4/4, quanto tempo dura uma pausa de colcheia?", o: ["Meio tempo", "Um tempo", "Dois tempos", "Quatro tempos"], c: 0 },
+    { q: "Por que as pausas são importantes na música?", o: ["Porque eliminam o ritmo", "Porque substituem as claves", "Porque organizam os silêncios e o ritmo", "Porque aumentam a altura das notas"], c: 2 }
+  ]
+},
   { id: 11, etapa: 3, titulo: "Pulso e Ritmo" },
   { id: 12, etapa: 3, titulo: "Compasso e Barra de Compasso" },
   { id: 13, etapa: 3, titulo: "Fórmula de Compasso 4/4" },
