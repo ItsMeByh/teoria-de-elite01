@@ -141,10 +141,68 @@ const sobre = () => `<section class="pg"><h2>Sobre o Teoria de Elite</h2>
 // IA auxiliar: para conectar uma IA real, defina window.TE_IA = async pergunta => resposta
 async function responderIA(q) {
   if (window.TE_IA) return window.TE_IA(q);
-  const t = q.toLowerCase();
-  if (/exerc/.test(t)) return "Exercício de ritmo: conte 1-2-3-4 em pulso constante batendo o pé. Bata palmas nos tempos 1 e 3 e diga baixinho os tempos 2 e 4. Repita por 1 minuto.";
-  const g = GLOSS.find(x => t.includes(x[0].toLowerCase()));
-  return g ? `${g[0]}: ${g[1]}` : "Ainda não sei responder isso. Pergunte sobre compasso, clave, pentagrama, pulso, timbre, melodia ou harmonia.";
+
+  const normalizar = s => String(s).toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .trim();
+
+  const t = normalizar(q);
+
+  if (/^(oi+|ola+|opa|e ai|bom dia|boa tarde|boa noite)[!?.\s]*$/.test(t)) {
+    return "Olá! 🎵 Seja bem-vindo ao Teoria de Elite! Sou seu assistente musical. Posso explicar aulas, tirar dúvidas e criar exercícios. Como posso ajudar?";
+  }
+
+  if (/obrigad|valeu|agradec/.test(t)) {
+    return "Por nada! 🎶 Continue estudando. Estou aqui para ajudar!";
+  }
+
+  if (/quem e voce|seu nome|o que voce faz/.test(t)) {
+    return "Sou o assistente virtual do Teoria de Elite! Ajudo você a estudar teoria musical, entender as aulas e praticar.";
+  }
+
+  if (/ajuda|nao entendi|tenho duvida/.test(t) && !/aula\s*\d+/.test(t)) {
+    return "Claro! 🎵 Me diga qual assunto ou aula você não entendeu. Vou tentar explicar de uma maneira simples.";
+  }
+
+  const numero = t.match(/aula\s*0?(\d+)/);
+  if (numero) {
+    const l = LESSONS.find(x => x.id === Number(numero[1]));
+    if (l && l.corpo) {
+      return `📚 Aula ${l.id} - ${l.titulo}\n\n${l.corpo.join("\n\n")}\n\nResumo: ${l.resumo}`;
+    }
+    return l
+      ? `A aula ${l.id} - ${l.titulo} ainda está em preparação.`
+      : "Não encontrei essa aula no curso.";
+  }
+
+  if (/exerc|atividade|treinar|praticar/.test(t)) {
+    const exercicios = [
+      "🎵 Exercício 1: escreva as sete notas musicais em ordem.",
+      "🎼 Exercício 2: quantas linhas e espaços existem no pentagrama?",
+      "🥁 Exercício 3: conte 1, 2, 3, 4 e bata palmas nos tempos 1 e 3.",
+      "🎶 Exercício 4: explique a diferença entre a Clave de Sol e a Clave de Fá."
+    ];
+    return exercicios.join("\n\n");
+  }
+
+  const g = GLOSS.find(x => t.includes(normalizar(x[0])));
+  if (g) return `🎵 ${g[0]}: ${g[1]}`;
+
+  const aula = LESSONS.filter(l => l.corpo).find(l =>
+    t.includes(normalizar(l.titulo)) ||
+    (normalizar(l.titulo).split(" ").filter(w => w.length > 4)
+      .some(w => t.includes(w)))
+  );
+
+  if (aula) {
+    return `🎼 ${aula.titulo}\n\n${aula.corpo.join("\n\n")}\n\nResumo: ${aula.resumo}`;
+  }
+
+  if (/o que e musica|defina musica/.test(t)) {
+    return "🎵 Música é a arte de organizar sons e silêncios no tempo. Seus principais elementos são ritmo, melodia e harmonia.";
+  }
+
+  return "🎵 Posso ajudar com teoria musical, notas, claves, ritmo e os conteúdos das aulas. Tente perguntar, por exemplo: 'Explique a aula 7', 'O que é pentagrama?' ou 'Me passe exercícios'.";
 }
 const ia = () => `<section class="pg"><h2>Precisa de ajuda?</h2><p class="mute">Assistente de apoio. Ele complementa o curso, não o substitui.</p>
 <div class="chat" id="chat"><div class="msg">Pergunte, por exemplo: "Explique o que é um compasso".</div></div>
