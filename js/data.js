@@ -82,7 +82,26 @@ const LESSONS = [
     { q: "Quais são as notas das linhas na Clave de Fá, de baixo para cima?", o: ["Mi, Sol, Si, Ré, Fá", "Sol, Si, Ré, Fá, Lá", "Lá, Dó, Mi, Sol, Si", "Dó, Ré, Mi, Fá, Sol"], c: 1 }
   ]
 },
-  { id: 8, etapa: 2, titulo: "Leitura das Notas" },
+ { id: 8, etapa: 2, titulo: "Leitura das Notas",
+  objetivo: "Aprender a identificar e ler as notas musicais no pentagrama utilizando as claves.",
+  corpo: [
+    "A leitura das notas musicais é a habilidade de identificar os sons escritos no pentagrama. Cada nota ocupa uma linha ou um espaço.",
+    "Para descobrir o nome de uma nota, primeiro precisamos observar a clave que aparece no início do pentagrama.",
+    "Na Clave de Sol, as notas das linhas, de baixo para cima, são: Mi, Sol, Si, Ré e Fá.",
+    "Na Clave de Sol, as notas dos espaços, de baixo para cima, são: Fá, Lá, Dó e Mi.",
+    "Na Clave de Fá, as notas das linhas, de baixo para cima, são: Sol, Si, Ré, Fá e Lá.",
+    "Na Clave de Fá, as notas dos espaços, de baixo para cima, são: Lá, Dó, Mi e Sol.",
+    "Para melhorar sua leitura musical, pratique identificando as notas de baixo para cima e depois em diferentes ordens.",
+    "Exercício: imagine uma nota na terceira linha do pentagrama. Na Clave de Sol, ela será Si. Na Clave de Fá, será Ré."
+  ],
+  resumo: "Para ler notas musicais, identificamos a clave e a posição da nota nas linhas ou espaços do pentagrama. Cada clave determina os nomes das notas.",
+  quiz: [
+    { q: "Qual é a nota da primeira linha na Clave de Sol?", o: ["Dó", "Mi", "Sol", "Fá"], c: 1 },
+    { q: "Qual é a nota do terceiro espaço na Clave de Sol?", o: ["Lá", "Si", "Dó", "Ré"], c: 2 },
+    { q: "Qual é a nota da terceira linha na Clave de Fá?", o: ["Si", "Ré", "Fá", "Sol"], c: 1 },
+    { q: "O que precisamos observar primeiro para identificar uma nota no pentagrama?", o: ["A velocidade", "A intensidade", "A clave", "O instrumento"], c: 2 }
+  ]
+},
   { id: 9, etapa: 3, titulo: "Figuras Musicais" },
   { id: 10, etapa: 3, titulo: "Pausas Musicais" },
   { id: 11, etapa: 3, titulo: "Pulso e Ritmo" },
