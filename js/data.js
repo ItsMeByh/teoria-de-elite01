@@ -65,7 +65,23 @@ const LESSONS = [
     { q: "A Clave de Sol é muito utilizada para representar sons...", o: ["Somente graves", "Médios e agudos", "Somente percussivos", "Sem altura definida"], c: 1 }
   ]
 },
-  { id: 7, etapa: 2, titulo: "Clave de Fá" },
+{ id: 7, etapa: 2, titulo: "Clave de Fá",
+  objetivo: "Compreender a Clave de Fá e identificar as notas no pentagrama.",
+  corpo: [
+    "A Clave de Fá é um símbolo musical usado principalmente para representar sons graves, como os produzidos pelo contrabaixo, violoncelo e pela mão esquerda do piano.",
+    "A Clave de Fá mais utilizada é colocada na quarta linha do pentagrama. Essa linha representa a nota Fá.",
+    "Os dois pontos da Clave de Fá ficam um acima e outro abaixo da quarta linha, indicando a posição da nota Fá.",
+    "Na Clave de Fá, as notas das linhas, de baixo para cima, são: Sol, Si, Ré, Fá e Lá.",
+    "As notas dos espaços, de baixo para cima, são: Lá, Dó, Mi e Sol.",
+    "A principal diferença entre a Clave de Sol e a Clave de Fá é a posição das notas no pentagrama. A Clave de Sol indica o Sol na segunda linha, enquanto a Clave de Fá indica o Fá na quarta linha."
+  ],
+  resumo: "A Clave de Fá é utilizada principalmente para sons graves. Ela indica a nota Fá na quarta linha do pentagrama. Linhas: Sol, Si, Ré, Fá e Lá. Espaços: Lá, Dó, Mi e Sol.",
+  quiz: [
+    { q: "Em qual linha do pentagrama fica a nota Fá na Clave de Fá?", o: ["Primeira", "Segunda", "Terceira", "Quarta"], c: 3 },
+    { q: "A Clave de Fá é utilizada principalmente para representar quais sons?", o: ["Agudos", "Graves", "Somente rápidos", "Somente fortes"], c: 1 },
+    { q: "Quais são as notas das linhas na Clave de Fá, de baixo para cima?", o: ["Mi, Sol, Si, Ré, Fá", "Sol, Si, Ré, Fá, Lá", "Lá, Dó, Mi, Sol, Si", "Dó, Ré, Mi, Fá, Sol"], c: 1 }
+  ]
+},
   { id: 8, etapa: 2, titulo: "Leitura das Notas" },
   { id: 9, etapa: 3, titulo: "Figuras Musicais" },
   { id: 10, etapa: 3, titulo: "Pausas Musicais" },
