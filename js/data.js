@@ -1,5 +1,51 @@
 // Para adicionar uma aula: preencha "corpo", "resumo" e "quiz" na aula correspondente
 // (ou inclua um novo objeto em LESSONS). Nada mais precisa mudar.
+const MODULOS = [
+  {
+    id: 1,
+    nome: "Fundamentos Musicais",
+    descricao: "Introdução à teoria, leitura e ritmo musical.",
+    disciplinas: [
+      "Fundamentos da Música",
+      "Leitura Musical",
+      "Ritmo e Compasso"
+    ],
+    etapas: [1, 2, 3]
+  },
+  {
+    id: 2,
+    nome: "Harmonia e Percepção",
+    descricao: "Estudo das escalas, acordes e percepção auditiva.",
+    disciplinas: [
+      "Melodia e Escalas",
+      "Harmonia Musical",
+      "Percepção Musical"
+    ],
+    etapas: [4, 5, 6]
+  },
+  {
+    id: 3,
+    nome: "Composição e Análise",
+    descricao: "Estudo da composição e da estrutura musical.",
+    disciplinas: [
+      "História da Música",
+      "Análise Musical",
+      "Composição e Arranjos"
+    ],
+    etapas: [7]
+  },
+  {
+    id: 4,
+    nome: "Prática Profissional",
+    descricao: "Aplicação dos conhecimentos musicais.",
+    disciplinas: [
+      "Produção Musical",
+      "Prática Musical",
+      "Projeto Final"
+    ],
+    etapas: []
+  }
+];
 const STAGES = [
   { id: 1, nome: "Fundamentos", desc: "O som, o silêncio e os elementos da música." },
   { id: 2, nome: "Leitura Musical", desc: "Notas, pentagrama e claves." },
