@@ -303,7 +303,7 @@ async function iniciar() {
   }
   render();
 }
-document.addEventListener("click", e => {
+document.addEventListener("click", async e => {
   const botaoBloqueio = e.target.closest("#bloquear-aluno");
 if (botaoBloqueio) {
   e.preventDefault();
