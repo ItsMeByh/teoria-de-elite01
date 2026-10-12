@@ -280,6 +280,9 @@ const listaHTML = L => {
 const alunoHTML = d => {
   const { p, a, q, v } = d, g = { xp: 0, estrelas: 0, aulas_concluidas: 0, progresso_geral: 0, nivel: 0, ...d.g }, cn = Object.fromEntries(CONQ.map(c => [c.id, c.nome]));
   return `<section class="pg"><a class="mute" href="#/admin">← Alunos</a><h2>${esc(p.nome)}</h2>
+<button type="button" id="bloquear-aluno" data-id="${esc(p.id)}" data-bloquear="${!p.is_blocked}">
+  ${p.is_blocked ? "Desbloquear aluno" : "Bloquear aluno"}
+</button>
 <p class="mute">${esc(p.email)} · ${p.idade || "—"} anos · ${esc(p.nivel_musical || "—")}<br>Cadastro: ${dt(p.criado_em)} · Último acesso: ${dt(p.ultimo_acesso)}</p>${barra(g.progresso_geral)}
 <div class="grid">${stat(g.xp, "XP")}${stat(g.estrelas, "estrelas")}${stat(g.aulas_concluidas + "/" + LESSONS.length, "aulas")}${stat(NIVEIS[g.nivel], "nível")}</div><p class="mute">Última atividade: ${dt(g.ultima_atividade)}</p>
 <h3 style="margin-top:22px">Aulas concluídas</h3>${a.map(x => `<p class="mute">${esc((LESSONS.find(l => l.id === x.lesson_id) || {}).titulo || "Aula " + x.lesson_id)} · ${dt(x.concluida_em)} · +${x.xp_recebido} XP</p>`).join("") || `<p class="mute">Nenhuma ainda.</p>`}
