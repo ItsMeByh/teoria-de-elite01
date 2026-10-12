@@ -311,7 +311,7 @@ if (botaoBloqueio) {
   if (!S?.admin) return toast("Acesso negado.");
 
   const id = botaoBloqueio.dataset.id;
-  const bloquear = botaoBloqueio.dataset.bloquear !== "true";
+  const bloquear = botaoBloqueio.dataset.bloquear !== "false";
 
   if (!confirm(bloquear ? "Deseja bloquear este aluno?" : "Deseja desbloquear este aluno?")) return;
   
