@@ -313,8 +313,8 @@ if (botaoBloqueio) {
   const id = botaoBloqueio.dataset.id;
   const bloquear = botaoBloqueio.dataset.bloquear !== "true";
 
-  if (!confirm(`Deseja ${bloquear ? "bloquear" : "desbloquear"} este aluno?`)) return;
-
+  if (!confirm(bloquear ? "Deseja bloquear este aluno?" : "Deseja desbloquear este aluno?")) return;
+  
   botaoBloqueio.disabled = true;
 
   try {
