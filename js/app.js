@@ -295,6 +295,9 @@ async function admin() {
   try { el.innerHTML = p[1] === "aluno" && p[2] ? alunoHTML(await DB.admAluno(p[2])) : listaHTML(await DB.admLista()); }
   catch (e) { el.innerHTML = `<section class="pg"><h2>Erro ao carregar</h2><p class="mute">${esc(e.message)}</p></section>`; }
 }
+async function iniciar() {
+  if (DB.on) {
+    const u = await DB.user();
 if (u) {
   try {
     S = await DB.carregar(u, legacy);
