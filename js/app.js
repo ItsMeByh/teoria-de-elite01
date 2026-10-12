@@ -295,12 +295,24 @@ async function admin() {
   try { el.innerHTML = p[1] === "aluno" && p[2] ? alunoHTML(await DB.admAluno(p[2])) : listaHTML(await DB.admLista()); }
   catch (e) { el.innerHTML = `<section class="pg"><h2>Erro ao carregar</h2><p class="mute">${esc(e.message)}</p></section>`; }
 }
+if (u) {
+  try {
+    S = await DB.carregar(u, legacy);
+    save();
+  } catch (e) {
+    console.error(e);
 
-async function iniciar() {
-  if (DB.on) {
-    const u = await DB.user();
-    if (u) { try { S = await DB.carregar(u, legacy); save(); } catch (e) { console.error(e); toast("Não foi possível carregar seus dados."); } } else S = null;
+    if (e.message?.includes("bloqueada")) {
+      S = null;
+      localStorage.clear();
+      render();
+      alert("Sua conta foi bloqueada pelo administrador.");
+      return;
+    }
+
+    toast("Não foi possível carregar seus dados.");
   }
+}
   render();
 }
 document.addEventListener("click", async e => {
