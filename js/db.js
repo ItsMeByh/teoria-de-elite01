@@ -47,7 +47,15 @@ const DB = (() => {
       sb.from("avaliacoes").select("*").eq("user_id", id).order("criada_em", { ascending: false })]);
     return { p: ok(p), g: ok(g), a: ok(a), q: ok(q), v: ok(v) };
   }
+async function admBloquear(id, bloquear) {
+  const { data, error } = await SB.rpc(
+    "admin_definir_bloqueio",
+    { aluno_id: id, bloquear: bloquear }
+  );
 
+  if (error) throw error;
+  return data;
+}
   return { on, user, carregar, sync, avaliacao, admLista, admAluno,
     entrar: async (e, s) => ok(await sb.auth.signInWithPassword({ email: e, password: s })),
     cadastrar: async f => ok(await sb.auth.signUp({ email: f.email, password: f.senha, options: { data: { nome: f.nome, idade: f.idade, nivel: f.nivel } } })),
