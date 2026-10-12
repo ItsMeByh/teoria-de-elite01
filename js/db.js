@@ -48,7 +48,7 @@ const DB = (() => {
     return { p: ok(p), g: ok(g), a: ok(a), q: ok(q), v: ok(v) };
   }
 async function admBloquear(id, bloquear) {
-  const { data, error } = await SB.rpc(
+  const { data, error } = await sb.rpc(
     "admin_definir_bloqueio",
     { aluno_id: id, bloquear: bloquear }
   );
