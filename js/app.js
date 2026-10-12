@@ -304,6 +304,29 @@ async function iniciar() {
   render();
 }
 document.addEventListener("click", e => {
+  const botaoBloqueio = e.target.closest("#bloquear-aluno");
+if (botaoBloqueio) {
+  e.preventDefault();
+
+  if (!S?.admin) return toast("Acesso negado.");
+
+  const id = botaoBloqueio.dataset.id;
+  const bloquear = botaoBloqueio.dataset.bloquear !== "true";
+
+  if (!confirm(`Deseja ${bloquear ? "bloquear" : "desbloquear"} este aluno?`)) return;
+
+  botaoBloqueio.disabled = true;
+
+  try {
+    await DB.admBloquear(id, bloquear);
+    toast(bloquear ? "Aluno bloqueado!" : "Aluno desbloqueado!");
+    await admin();
+  } catch (erro) {
+    toast("Erro: " + erro.message);
+    botaoBloqueio.disabled = false;
+  }
+  return;
+}
   const b = e.target.closest("[data-x]"); if (!b) return;
   if (b.dataset.x === "tab") { $("#login").hidden = b.dataset.t !== "login"; $("#cadastro").hidden = b.dataset.t !== "cad"; }
   if (b.dataset.x === "sair") { e.preventDefault(); DB.sair().then(() => { S = null; try { localStorage.removeItem(KEY); } catch (x) {} location.hash = "#/"; render(); }); }
