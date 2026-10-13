@@ -256,6 +256,17 @@ function render() {
 }
 
 document.addEventListener("click", e => {
+  const botaoOuvir = e.target.closest('[data-act="ouvir-nota"]');
+
+if (botaoOuvir) {
+  if (!window.DesafioOuvido) {
+    alert("O jogo ainda não foi carregado.");
+    return;
+  }
+
+  window.DesafioOuvido.tocar();
+  return;
+}
   const b = e.target.closest("[data-act]"); if (!b) return;
   ({ resp: responder, concluir, finalizar })[b.dataset.act](b);
 });
