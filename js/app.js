@@ -299,6 +299,17 @@ if (botaoResposta) {
 
   return;
 }
+const botaoProxima = e.target.closest('[data-act="proxima-nota"]');
+
+if (botaoProxima) {
+  window.DesafioOuvido.novaNota();
+  window.DesafioOuvido.tocar();
+
+  document.querySelector("#resultado-ouvido").textContent =
+    "🎧 Ouça com atenção e escolha a nota!";
+
+  return;
+}
   const b = e.target.closest("[data-act]"); if (!b) return;
   ({ resp: responder, concluir, finalizar })[b.dataset.act](b);
 });
