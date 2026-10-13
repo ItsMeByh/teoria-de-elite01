@@ -207,7 +207,34 @@ async function responderIA(q) {
 const ia = () => `<section class="pg"><h2>Precisa de ajuda?</h2><p class="mute">Assistente de apoio. Ele complementa o curso, não o substitui.</p>
 <div class="chat" id="chat"><div class="msg">Pergunte, por exemplo: "Explique o que é um compasso".</div></div>
 <form class="row" id="fia" style="max-width:none"><input name="q" required placeholder="Sua pergunta" autocomplete="off"><button class="btn">ENVIAR</button></form></section>`;
+const desafioOuvido = () => `
+  <section class="pg">
+    <h2>🎧 Desafio de Ouvido Musical</h2>
+    <p>Ouça a nota musical e descubra qual é!</p>
 
+    <button type="button" data-act="ouvir-nota">
+      🔊 Ouvir nota
+    </button>
+
+    <h3>Qual nota você ouviu?</h3>
+
+    <div class="opcoes-ouvido">
+      ${["Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"]
+        .map(n => `
+          <button type="button" data-act="resposta-ouvido" data-nota="${n}">
+            ${n}
+          </button>
+        `).join("")}
+    </div>
+
+    <p id="resultado-ouvido"></p>
+    <p id="placar-ouvido">Acertos: 0 / 0</p>
+
+    <button type="button" data-act="proxima-nota">
+      🎵 Próxima nota
+    </button>
+  </section>
+`;
 // ---------- Rotas ----------
 const ROTAS = { "": home, entrada, painel, jornada, historia, materiais, avaliacoes, progresso, sobre, ia, aula };
 const GRUPO = { "": "a", entrada: "a", painel: "a", jornada: "b", aula: "b", historia: "c", materiais: "c", avaliacoes: "b", progresso: "b", sobre: "a", ia: "c" };
