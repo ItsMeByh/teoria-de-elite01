@@ -215,6 +215,10 @@ const PUBLICAS = ["", "entrada", "sobre"];
 function render() {
   const [r, arg] = location.hash.slice(2).split("/"), rota = ROTAS[r] ? r : "";
   if (!S && !PUBLICAS.includes(rota)) return location.hash = "#/entrada";
+ if (S && S.is_blocked === true && rota !== "sobre") {
+  location.hash = "#/sobre";
+  return;
+}
   if (S) tick();
   $("#nadmin").hidden = !(S && S.admin); $("#nsair").hidden = !(S && S.uid);
   document.body.dataset.g = GRUPO[rota];
