@@ -268,6 +268,37 @@ if (botaoOuvir) {
   window.DesafioOuvido.tocar();
   return;
 }
+ const botaoResposta = e.target.closest('[data-act="resposta-ouvido"]');
+
+if (botaoResposta) {
+  const jogo = window.DesafioOuvido;
+
+  if (!jogo) {
+    alert("O jogo não foi carregado.");
+    return;
+  }
+
+  const resultado = jogo.responder(botaoResposta.dataset.nota);
+  const mensagem = document.querySelector("#resultado-ouvido");
+  const placar = document.querySelector("#placar-ouvido");
+
+  if (!resultado) {
+    mensagem.textContent = "🔊 Primeiro, clique em Ouvir nota!";
+    return;
+  }
+
+  if (resultado.acertou) {
+    mensagem.textContent = "✅ Parabéns! Você acertou!";
+  } else {
+    mensagem.textContent =
+      "❌ Não foi dessa vez! A nota correta era " + resultado.resposta;
+  }
+
+  placar.textContent =
+    "Acertos: " + resultado.acertos + " / " + resultado.tentativas;
+
+  return;
+}
   const b = e.target.closest("[data-act]"); if (!b) return;
   ({ resp: responder, concluir, finalizar })[b.dataset.act](b);
 });
