@@ -18,7 +18,11 @@ const DB = (() => {
   await sb.auth.signOut();
   throw new Error("Sua conta foi bloqueada pelo administrador.");
 }
-    const s = { uid: u.id, admin: P.is_admin, nome: P.nome, idade: P.idade, nivel: P.nivel_musical, xp: G.xp, estrelas: G.estrelas, streak: G.streak, dia: G.dia || "", hist: G.hist || [],
+    const s = {
+      uid: u.id,
+      admin: P.is_admin,
+      is_blocked: P.is_blocked,
+      nome: P.nome, idade: P.idade, nivel: P.nivel_musical, xp: G.xp, estrelas: G.estrelas, streak: G.streak, dia: G.dia || "", hist: G.hist || [],
       feitas: ok(a).map(x => x.lesson_id), conquistas: ok(q).map(x => x.achievement_id), simulados: ok(v).map(x => ({ a: x.acertos, n: x.total, p: x.nota })) };
     if (legacy && !s.xp && !s.feitas.length && (legacy.xp || (legacy.feitas || []).length)) { // migração do localStorage
       Object.assign(s, { xp: legacy.xp, estrelas: legacy.estrelas, streak: legacy.streak || 0, dia: legacy.dia || "", hist: legacy.hist || [], feitas: legacy.feitas || [], conquistas: legacy.conquistas || [], simulados: legacy.simulados || [] });
