@@ -264,6 +264,7 @@ if (botaoOuvir) {
     return;
   }
 
+  window.DesafioOuvido.novaNota();
   window.DesafioOuvido.tocar();
   return;
 }
