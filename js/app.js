@@ -59,7 +59,26 @@ ${p ? `<a class="btn" href="#/aula/${p.id}">${S.feitas.length ? "CONTINUAR" : "P
 <h3 style="margin-top:32px">Conquistas</h3><div class="grid">${conqCards()}</div></section>`;
 };
 const conqCards = () => CONQ.map(c => `<div class="card conq ${S.conquistas.includes(c.id) ? "on" : ""}"><h3>${c.nome}</h3><span class="mute">${c.d}</span></div>`).join("");
+const menuCurso = () => `
+  <section class="pg">
+    <h2>🎓 Curso — Teoria de Elite</h2>
+    <p>Escolha o que deseja estudar hoje!</p>
 
+    <div class="grid">
+      <a class="card" href="#/jornada">
+        <h3>📚 Aulas</h3>
+        <p>Continue seus estudos de teoria musical.</p>
+        <span>Entrar nas aulas →</span>
+      </a>
+
+      <a class="card" href="#/desafioOuvido">
+        <h3>🎧 Desafio de Ouvido Musical</h3>
+        <p>Escute as notas e teste seu ouvido musical.</p>
+        <span>Começar desafio →</span>
+      </a>
+    </div>
+  </section>
+`;
 const jornada = () => `<section class="pg"><h2>Jornada musical</h2>${barra(pct())}<p class="mute">${pct()}% concluído</p>
 ${STAGES.map(e => {
   const ls = LESSONS.filter(l => l.etapa === e.id), f = ls.filter(l => S.feitas.includes(l.id)).length, at = proxima();
