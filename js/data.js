@@ -195,7 +195,79 @@ const LESSONS = [
     { q: "Por que as pausas são importantes na música?", o: ["Porque eliminam o ritmo", "Porque substituem as claves", "Porque organizam os silêncios e o ritmo", "Porque aumentam a altura das notas"], c: 2 }
   ]
 },
-  { id: 11, etapa: 3, titulo: "Pulso e Ritmo" },
+  {
+  id: 11,
+  etapa: 3,
+  titulo: "Pulso e Ritmo",
+
+  objetivo: "Entender a diferença entre pulso e ritmo e aprender a identificá-los na música.",
+
+  corpo: [
+    "O pulso é uma batida regular que acompanha a música. Podemos compará-lo às batidas de um relógio, que acontecem em intervalos constantes.",
+
+    "Quando você escuta uma música e começa a bater o pé acompanhando as batidas, provavelmente está seguindo o pulso musical.",
+
+    "O ritmo é a organização dos sons e silêncios ao longo do tempo. Ele pode combinar notas longas, curtas e pausas, criando diferentes padrões.",
+
+    "A principal diferença é que o pulso mantém uma referência regular de tempo, enquanto o ritmo pode variar dentro dessa referência.",
+
+    "Exemplo prático: bata quatro palmas igualmente espaçadas. Esse é o pulso. Agora bata duas palmas rápidas, espere um pouco e bata mais uma. Você criou um padrão rítmico.",
+
+    "💡 VOCÊ SABIA? O coração humano possui batimentos que podem lembrar um pulso regular. Porém, na música, o pulso é uma referência de tempo que pode ser mantida mesmo quando o ritmo muda.",
+
+    "EXERCÍCIO PRÁTICO: escolha uma música de que você gosta. Primeiro, bata o pé acompanhando o pulso. Depois, tente bater palmas acompanhando o ritmo da melodia. Perceba a diferença."
+  ],
+
+  resumo: "Pulso é a referência regular de tempo da música. Ritmo é a organização de sons e silêncios com diferentes durações.",
+
+  quiz: [
+    {
+      q: "O que é o pulso musical?",
+      o: [
+        "Uma batida regular que acompanha a música",
+        "O volume de uma música",
+        "O instrumento mais agudo"
+      ],
+      c: 0
+    },
+    {
+      q: "O que é ritmo?",
+      o: [
+        "A velocidade do som no ar",
+        "A organização dos sons e silêncios no tempo",
+        "A altura das notas musicais"
+      ],
+      c: 1
+    },
+    {
+      q: "Qual atividade ajuda a perceber o pulso?",
+      o: [
+        "Ler apenas o nome das notas",
+        "Aumentar o volume do instrumento",
+        "Bater o pé acompanhando as batidas regulares"
+      ],
+      c: 2
+    },
+    {
+      q: "Qual é a principal diferença entre pulso e ritmo?",
+      o: [
+        "O pulso é regular e o ritmo pode apresentar diferentes durações",
+        "O pulso só existe no piano",
+        "O ritmo não utiliza silêncios"
+      ],
+      c: 0
+    },
+    {
+      q: "Um ritmo musical pode conter pausas?",
+      o: [
+        "Não, apenas sons",
+        "Sim, sons e silêncios fazem parte do ritmo",
+        "Somente quando não existe pulso"
+      ],
+      c: 1
+    }
+  ]
+},
   { id: 12, etapa: 3, titulo: "Compasso e Barra de Compasso" },
   { id: 13, etapa: 3, titulo: "Fórmula de Compasso 4/4" },
   { id: 14, etapa: 3, titulo: "Leitura Rítmica" },
