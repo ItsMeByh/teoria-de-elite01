@@ -341,7 +341,85 @@ const LESSONS = [
     }
   ]
 },
-  { id: 13, etapa: 3, titulo: "Fórmula de Compasso 4/4" },
+ {
+  id: 13,
+  etapa: 3,
+  titulo: "Fórmula de Compasso 4/4",
+
+  objetivo: "Compreender o significado da fórmula de compasso 4/4 e aprender a contar seus tempos corretamente.",
+
+  corpo: [
+    "A fórmula de compasso é representada por dois números escritos um sobre o outro no início da partitura, depois da clave e da armadura de clave, quando houver.",
+
+    "O compasso 4/4 é um dos mais utilizados na música. Ele também é conhecido como compasso quaternário simples.",
+
+    "O número de cima, 4, indica que cada compasso contém quatro unidades de tempo.",
+
+    "O número de baixo, 4, indica que a semínima é a figura musical utilizada como unidade de tempo.",
+
+    "Isso significa que um compasso 4/4 possui o equivalente a quatro semínimas. Também podemos preencher o compasso com outras combinações de figuras e pausas que somem a mesma duração.",
+
+    "EXEMPLO: quatro semínimas completam um compasso 4/4. Duas mínimas também completam esse compasso, assim como uma semibreve.",
+
+    "Para contar o compasso 4/4, podemos dizer: UM, dois, três, quatro | UM, dois, três, quatro. O primeiro tempo costuma receber o acento principal.",
+
+    "💡 VOCÊ SABIA? O compasso 4/4 é tão comum que muitas partituras utilizam a letra C estilizada para representá-lo. Esse símbolo é chamado de compasso comum.",
+
+    "EXERCÍCIO PRÁTICO: coloque uma música com batida regular e tente contar 1, 2, 3, 4 acompanhando o pulso. Depois bata palmas no primeiro tempo de cada grupo.",
+
+    "DESAFIO: experimente tocar quatro batidas iguais sobre uma mesa e repetir o padrão sem acelerar nem diminuir a velocidade."
+  ],
+
+  resumo: "O compasso 4/4 possui quatro unidades de tempo por compasso, e a semínima é a unidade de tempo. O primeiro tempo geralmente recebe o acento principal.",
+
+  quiz: [
+    {
+      q: "O que indica o número de cima na fórmula 4/4?",
+      o: [
+        "A quantidade de instrumentos",
+        "Quatro unidades de tempo por compasso",
+        "A velocidade da música"
+      ],
+      c: 1
+    },
+    {
+      q: "O que indica o número de baixo na fórmula 4/4?",
+      o: [
+        "A semínima como unidade de tempo",
+        "Quatro compassos na música",
+        "O volume do instrumento"
+      ],
+      c: 0
+    },
+    {
+      q: "Quantas semínimas completam um compasso 4/4?",
+      o: [
+        "Duas",
+        "Três",
+        "Quatro"
+      ],
+      c: 2
+    },
+    {
+      q: "Qual destas combinações completa um compasso 4/4?",
+      o: [
+        "Uma única semínima",
+        "Duas mínimas",
+        "Três colcheias"
+      ],
+      c: 1
+    },
+    {
+      q: "Qual tempo costuma receber o acento principal no compasso 4/4?",
+      o: [
+        "O primeiro tempo",
+        "O terceiro tempo",
+        "O quarto tempo"
+      ],
+      c: 0
+    }
+  ]
+},
   { id: 14, etapa: 3, titulo: "Leitura Rítmica" },
   { id: 15, etapa: 3, titulo: "Leitura Métrica e Solfejo" }
 ];
