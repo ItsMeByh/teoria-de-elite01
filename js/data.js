@@ -420,7 +420,87 @@ const LESSONS = [
     }
   ]
 },
-  { id: 14, etapa: 3, titulo: "Leitura Rítmica" },
+{
+  id: 14,
+  etapa: 3,
+  titulo: "Fórmula de Compasso 3/4",
+
+  objetivo: "Aprender o significado da fórmula de compasso 3/4, identificar seus três tempos e compreender como ela é utilizada na música.",
+
+  corpo: [
+    "Na aula anterior, aprendemos que o compasso 4/4 possui quatro tempos de semínima. Agora vamos conhecer o compasso 3/4, que organiza a música em grupos de três tempos.",
+
+    "A fórmula de compasso 3/4 apresenta dois números. O número de cima, 3, indica que cada compasso possui três unidades de tempo.",
+
+    "O número de baixo, 4, indica que a semínima é a figura musical utilizada como unidade de tempo.",
+
+    "Portanto, um compasso 3/4 pode ser preenchido por três semínimas ou por outras combinações de figuras e pausas que tenham a mesma duração total.",
+
+    "EXEMPLO: uma mínima e uma semínima completam um compasso 3/4. Seis colcheias também completam esse compasso.",
+
+    "Para contar o compasso 3/4, podemos dizer: UM, dois, três | UM, dois, três. O primeiro tempo geralmente recebe o acento principal.",
+
+    "O compasso 3/4 é chamado de ternário simples. Ele é muito conhecido por aparecer em diversas valsas, que apresentam uma sensação de movimento em três tempos.",
+
+    "Uma diferença importante é que o compasso 4/4 organiza quatro tempos, enquanto o 3/4 organiza três. Essa mudança altera a maneira como sentimos e contamos a música.",
+
+    "💡 VOCÊ SABIA? A valsa se tornou muito popular na Europa e é um dos exemplos mais conhecidos de música escrita em compasso 3/4.",
+
+    "EXERCÍCIO PRÁTICO: bata palmas contando 1, 2, 3 | 1, 2, 3. Faça uma palma um pouco mais forte no número 1 e mantenha as outras duas mais suaves.",
+
+    "DESAFIO MUSICAL: compare duas contagens. Primeiro conte 1, 2, 3, 4 e depois 1, 2, 3. Perceba como o agrupamento das batidas muda."
+  ],
+
+  resumo: "O compasso 3/4 possui três unidades de tempo por compasso, e a semínima é a unidade de tempo. É chamado de ternário simples e aparece frequentemente nas valsas.",
+
+  quiz: [
+    {
+      q: "Quantos tempos de semínima existem em um compasso 3/4?",
+      o: [
+        "Dois",
+        "Três",
+        "Quatro"
+      ],
+      c: 1
+    },
+    {
+      q: "O que indica o número 4 na parte inferior da fórmula 3/4?",
+      o: [
+        "A semínima como unidade de tempo",
+        "Quatro instrumentos",
+        "Quatro compassos"
+      ],
+      c: 0
+    },
+    {
+      q: "Qual combinação completa corretamente um compasso 3/4?",
+      o: [
+        "Uma mínima e uma semínima",
+        "Uma semibreve",
+        "Duas semínimas"
+      ],
+      c: 0
+    },
+    {
+      q: "Qual estilo de dança é muito associado ao compasso 3/4?",
+      o: [
+        "Samba",
+        "Valsa",
+        "Marcha militar"
+      ],
+      c: 1
+    },
+    {
+      q: "Qual é a contagem correta de um compasso 3/4?",
+      o: [
+        "1, 2 | 1, 2",
+        "1, 2, 3, 4 | 1, 2, 3, 4",
+        "1, 2, 3 | 1, 2, 3"
+      ],
+      c: 2
+    }
+  ]
+},
   { id: 15, etapa: 3, titulo: "Leitura Métrica e Solfejo" }
 ];
 
