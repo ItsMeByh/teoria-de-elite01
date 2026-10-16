@@ -501,7 +501,89 @@ const LESSONS = [
     }
   ]
 },
-  { id: 15, etapa: 3, titulo: "Leitura Métrica e Solfejo" }
+ {
+  id: 15,
+  etapa: 3,
+  titulo: "Fórmula de Compasso 2/4",
+
+  objetivo: "Compreender a fórmula de compasso 2/4, aprender a contar seus dois tempos e identificar suas características na música.",
+
+  corpo: [
+    "Nas aulas anteriores, conhecemos os compassos 4/4 e 3/4. Agora vamos aprender o compasso 2/4, que organiza a música em grupos de dois tempos.",
+
+    "A fórmula de compasso 2/4 possui dois números. O número de cima, 2, indica que cada compasso contém duas unidades de tempo.",
+
+    "O número de baixo, 4, indica que a semínima é a figura musical utilizada como unidade de tempo.",
+
+    "Isso significa que cada compasso 2/4 possui o equivalente à duração de duas semínimas.",
+
+    "EXEMPLO: duas semínimas completam um compasso 2/4. Uma mínima também completa esse compasso, assim como quatro colcheias.",
+
+    "O compasso 2/4 é chamado de binário simples porque organiza a música em dois tempos, com subdivisão binária de cada tempo.",
+
+    "Para contar o compasso 2/4, podemos dizer: UM, dois | UM, dois | UM, dois. O primeiro tempo costuma ser forte e o segundo, fraco.",
+
+    "Esse tipo de compasso aparece em muitas marchas e em diferentes estilos musicais, ajudando a criar uma sensação regular de dois tempos.",
+
+    "COMPARAÇÃO: no compasso 2/4 contamos dois tempos; no 3/4 contamos três; e no 4/4 contamos quatro. Todos utilizam a semínima como unidade de tempo.",
+
+    "💡 VOCÊ SABIA? A organização em dois tempos é bastante natural para movimentos como caminhar, pois podemos associar as batidas à alternância dos passos.",
+
+    "EXERCÍCIO PRÁTICO: bata palmas contando 1, 2 | 1, 2. Faça uma palma mais forte no número 1 e uma mais suave no número 2.",
+
+    "DESAFIO MUSICAL: caminhe lentamente enquanto conta 1, 2 | 1, 2. Tente manter os passos regulares e perceber a alternância entre os tempos."
+  ],
+
+  resumo: "O compasso 2/4 possui duas unidades de tempo por compasso, e a semínima é a unidade de tempo. É um compasso binário simples, geralmente com o primeiro tempo forte e o segundo fraco.",
+
+  quiz: [
+    {
+      q: "Quantos tempos de semínima existem em um compasso 2/4?",
+      o: [
+        "Dois",
+        "Três",
+        "Quatro"
+      ],
+      c: 0
+    },
+    {
+      q: "O que indica o número de baixo na fórmula 2/4?",
+      o: [
+        "A velocidade da música",
+        "A semínima como unidade de tempo",
+        "A quantidade de instrumentos"
+      ],
+      c: 1
+    },
+    {
+      q: "Qual combinação completa um compasso 2/4?",
+      o: [
+        "Três semínimas",
+        "Uma semibreve",
+        "Uma mínima"
+      ],
+      c: 2
+    },
+    {
+      q: "Como é chamado o compasso 2/4?",
+      o: [
+        "Binário simples",
+        "Ternário simples",
+        "Quaternário composto"
+      ],
+      c: 0
+    },
+    {
+      q: "Qual é a contagem correta do compasso 2/4?",
+      o: [
+        "1, 2, 3 | 1, 2, 3",
+        "1, 2 | 1, 2",
+        "1, 2, 3, 4 | 1, 2, 3, 4"
+      ],
+      c: 1
+    }
+  ]
+},
 ];
 
 const PERIODOS = [
