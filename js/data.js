@@ -268,7 +268,79 @@ const LESSONS = [
     }
   ]
 },
-  { id: 12, etapa: 3, titulo: "Compasso e Barra de Compasso" },
+ {
+  id: 12,
+  etapa: 3,
+  titulo: "Compasso e Barra de Compasso",
+
+  objetivo: "Entender o que é compasso e como as barras de compasso organizam a música.",
+
+  corpo: [
+    "O compasso é uma forma de organizar a música em grupos de tempos. Esses grupos ajudam os músicos a acompanhar o ritmo.",
+
+    "Imagine que você está contando: 1, 2, 3, 4 | 1, 2, 3, 4. Cada grupo de quatro tempos pode representar um compasso.",
+
+    "A barra de compasso é uma linha vertical que atravessa o pentagrama. Ela separa um compasso do próximo.",
+
+    "Existem diferentes tipos de barras: a barra simples separa compassos, a barra dupla pode indicar uma mudança de seção e a barra final indica o encerramento da música.",
+
+    "💡 CURIOSIDADE: A escrita musical mudou muito ao longo da história. As barras de compasso passaram a ser utilizadas de forma mais sistemática conforme a notação musical evoluiu.",
+
+    "EXERCÍCIO PRÁTICO: bata palmas contando 1, 2, 3, 4. Repita a contagem várias vezes, mantendo as batidas regulares.",
+
+    "Agora conte 1, 2, 3 | 1, 2, 3. Perceba como podemos organizar a música em grupos diferentes."
+  ],
+
+  resumo: "O compasso organiza a música em grupos de tempos. As barras de compasso separam esses grupos na partitura.",
+
+  quiz: [
+    {
+      q: "O que é um compasso musical?",
+      o: [
+        "Um instrumento musical",
+        "Uma divisão da música em grupos de tempos",
+        "Uma nota musical"
+      ],
+      c: 1
+    },
+    {
+      q: "Qual é a função da barra de compasso?",
+      o: [
+        "Separar os compassos",
+        "Aumentar o volume",
+        "Indicar notas agudas"
+      ],
+      c: 0
+    },
+    {
+      q: "Qual sequência apresenta grupos de quatro tempos?",
+      o: [
+        "1, 2 | 1, 2",
+        "1, 2, 3 | 1, 2, 3",
+        "1, 2, 3, 4 | 1, 2, 3, 4"
+      ],
+      c: 2
+    },
+    {
+      q: "O que a barra final indica?",
+      o: [
+        "O início da música",
+        "O encerramento da música",
+        "Uma nota mais forte"
+      ],
+      c: 1
+    },
+    {
+      q: "O que a barra dupla pode indicar?",
+      o: [
+        "Uma mudança de seção",
+        "Uma nota mais grave",
+        "Um aumento de velocidade"
+      ],
+      c: 0
+    }
+  ]
+},
   { id: 13, etapa: 3, titulo: "Fórmula de Compasso 4/4" },
   { id: 14, etapa: 3, titulo: "Leitura Rítmica" },
   { id: 15, etapa: 3, titulo: "Leitura Métrica e Solfejo" }
