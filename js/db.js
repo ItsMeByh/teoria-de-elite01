@@ -32,9 +32,15 @@ const DB = (() => {
     ok(await sb.from("profiles").update({ ultimo_acesso: new Date().toISOString() }).eq("id", u.id));
     return s;
   }
+let t;
 
-  let t;
-  const sync = s => { clearTimeout(t); t = setTimeout(() => enviar(s), 400); };
+const sync = s => {
+  clearTimeout(t);
+
+  t = setTimeout(() => {
+    enviar(s);
+  }, 400);
+};
   async function enviar(s) {
     try {
       const id = s.uid;
