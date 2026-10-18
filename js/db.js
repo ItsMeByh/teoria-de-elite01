@@ -47,7 +47,16 @@ const sync = s => {
       ok(await sb.from("progresso").upsert({ user_id: id, xp: s.xp, estrelas: s.estrelas, aulas_concluidas: s.feitas.length, progresso_geral: Math.round(s.feitas.length / LESSONS.length * 100), nivel: Math.min(Math.floor(s.xp / 100), 4), streak: s.streak, dia: s.dia || null, hist: s.hist, ultima_atividade: new Date().toISOString() }));
       if (s.feitas.length) ok(await sb.from("aulas_concluidas").upsert(s.feitas.map(l => ({ user_id: id, lesson_id: l, xp_recebido: 50 })), { onConflict: "user_id,lesson_id", ignoreDuplicates: true }));
       if (s.conquistas.length) ok(await sb.from("conquistas").upsert(s.conquistas.map(a => ({ user_id: id, achievement_id: a })), { onConflict: "user_id,achievement_id", ignoreDuplicates: true }));
-    } catch (e) { console.error(e); window.toast && toast("Sem conexão. O progresso será enviado no próximo salvamento."); }
+   } catch (e) {
+  console.error(e);
+
+  if (typeof toast === "function") {
+    toast("Falha ao salvar. Tentaremos novamente em 5 segundos.");
+  }
+
+  clearTimeout(t);
+  t = setTimeout(() => enviar(s), 5000);
+}
   }
 
   async function admLista() {
