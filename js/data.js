@@ -585,6 +585,57 @@ const LESSONS = [
   ]
 },
 ];
+{
+  id: 16,
+  etapa: 3,
+  titulo: "Ponto de Aumento",
+
+  objetivo: "Aprender como o ponto de aumento modifica a duração das figuras musicais.",
+
+  corpo: [
+    "🎵 O QUE É? O ponto de aumento é um pontinho colocado à direita de uma figura musical.",
+
+    "Ele aumenta a duração da figura em 50% do seu valor original. Isso significa que acrescentamos metade do tempo que ela já possui.",
+
+    "🎼 EXEMPLO 1: uma mínima vale 2 tempos. Com o ponto de aumento, ganha mais 1 tempo e passa a valer 3 tempos.",
+
+    "🎼 EXEMPLO 2: uma semínima vale 1 tempo. Com o ponto, ganha mais meio tempo e passa a valer 1 tempo e meio.",
+
+    "💡 CURIOSIDADE: o ponto de aumento também pode aparecer ao lado de uma pausa musical! Nesse caso, aumenta o tempo de silêncio em 50%.",
+
+    "👏 VAMOS PRATICAR? Conte 1, 2, 3 lentamente, imaginando uma mínima pontuada sendo sustentada durante os três tempos."
+  ],
+
+  resumo: "O ponto de aumento acrescenta 50% da duração original de uma figura musical ou pausa.",
+
+  quiz: [
+    {
+      q: "Quanto o ponto de aumento acrescenta à duração de uma figura?",
+      o: ["25%", "50%", "100%"],
+      c: 1
+    },
+    {
+      q: "Uma mínima vale 2 tempos. Quanto vale uma mínima pontuada?",
+      o: ["2 tempos", "3 tempos", "4 tempos"],
+      c: 1
+    },
+    {
+      q: "Uma semínima vale 1 tempo. Quanto vale uma semínima pontuada?",
+      o: ["1 tempo e meio", "2 tempos", "3 tempos"],
+      c: 0
+    },
+    {
+      q: "Onde colocamos o ponto de aumento?",
+      o: ["À esquerda da figura", "Em cima da figura", "À direita da figura"],
+      c: 2
+    },
+    {
+      q: "O ponto de aumento também pode ser usado em pausas?",
+      o: ["Sim", "Não", "Somente em compassos 4/4"],
+      c: 0
+    }
+  ]
+}
 
 const PERIODOS = [
   { id: "pre", nome: "Pré-História", anos: "até ~3000 a.C.", resumo: "Voz, percussão corporal e flautas de osso.", marcos: ["Flautas de osso com mais de 40 mil anos", "Música ligada a rituais"], comp: "Sem autoria conhecida", cur: "Instrumentos mais antigos já encontrados são flautas." },
