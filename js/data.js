@@ -584,7 +584,7 @@ const LESSONS = [
     }
   ]
 },
-];
+// A lista continua com a aula 16
 {
   id: 16,
   etapa: 3,
