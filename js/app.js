@@ -11,6 +11,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
 const nivel = () => Math.min(Math.floor(S.xp / 100), 4);
 const pct = () => Math.round(S.feitas.length / LESSONS.length * 100);
 const livre = l => {
+  if (S?.admin === true) return true;
   if (S.feitas.includes(l.id)) return true;
   if (!S.inicio_curso) return l.id === 1;
 
