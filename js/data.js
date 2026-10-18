@@ -637,6 +637,8 @@ const LESSONS = [
   ]
 }
 
+];
+
 const PERIODOS = [
   { id: "pre", nome: "Pré-História", anos: "até ~3000 a.C.", resumo: "Voz, percussão corporal e flautas de osso.", marcos: ["Flautas de osso com mais de 40 mil anos", "Música ligada a rituais"], comp: "Sem autoria conhecida", cur: "Instrumentos mais antigos já encontrados são flautas." },
   { id: "ant", nome: "Antiguidade", anos: "~3000 a.C. – 476", resumo: "Egito, Grécia e Roma estudam o som e criam instrumentos como a lira.", marcos: ["Pitágoras relaciona notas e proporções", "Música no teatro grego"], comp: "Pitágoras (teórico)", cur: "A palavra 'música' vem das Musas gregas." },
