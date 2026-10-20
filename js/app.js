@@ -102,7 +102,7 @@ const menuCurso = () => `
   </section>
 `;
 const jornada = () => `<section class="pg"><h2>Jornada musical</h2>
-${!S.instrumento ? `
+${!S.admin && !S.instrumento ? `
 <div class="card" style="margin:20px 0">
   <h3>🎵 Qual instrumento você toca?</h3>
   <p>Escolha seu instrumento para personalizar seus estudos.</p>
