@@ -146,7 +146,7 @@ async function admBloquear(id, bloquear) {
     .select("instrumento")
     .single());
 };
-  return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear ,
+ return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear, salvarInstrumento,
           entrar: async (e, s) => ok(await sb.auth.signInWithPassword({ email: e, password: s })),
     cadastrar: async f => ok(await sb.auth.signUp({ email: f.email, password: f.senha, options: { data: { nome: f.nome, idade: f.idade, nivel: f.nivel } } })),
     sair: () => sb.auth.signOut(),
