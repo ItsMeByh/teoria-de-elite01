@@ -121,6 +121,8 @@ ${!S.admin && !S.instrumento ? `
 </div>
 ` : S.admin && !S.instrumento
   ? `<p class="mute">🛠️ Modo administrador: você poderá testar todos os instrumentos.</p>`
+` : S.admin && !S.instrumento
+  ? `<p class="mute">🛠️ Modo administrador: você poderá testar todos os instrumentos.</p>`
   : `<p>🎼 Instrumento escolhido: ${esc(S.instrumento)}</p>`}
 ${barra(pct())}<p class="mute">${pct()}% concluído</p>
 ${STAGES.map(e => {
