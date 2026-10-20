@@ -119,7 +119,9 @@ ${!S.admin && !S.instrumento ? `
   </select>
   <p class="mute">A escolha será salva em uma próxima etapa.</p>
 </div>
-` : `<p>🎼 Instrumento escolhido: ${esc(S.instrumento)}</p>`}
+` : S.admin && !S.instrumento
+  ? `<p class="mute">🛠️ Modo administrador: você poderá testar todos os instrumentos.</p>`
+  : `<p>🎼 Instrumento escolhido: ${esc(S.instrumento)}</p>`}
 ${barra(pct())}<p class="mute">${pct()}% concluído</p>
 ${STAGES.map(e => {
   const ls = LESSONS.filter(l => l.etapa === e.id), f = ls.filter(l => S.feitas.includes(l.id)).length, at = proxima();
