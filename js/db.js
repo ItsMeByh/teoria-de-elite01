@@ -139,7 +139,15 @@ async function admBloquear(id, bloquear) {
   return data;
 }
   return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear ,
-    entrar: async (e, s) => ok(await sb.auth.signInWithPassword({ email: e, password: s })),
+  const salvarInstrumento = async (uid, instrumento) => {
+  return ok(await sb
+    .from("profiles")
+    .update({ instrumento: instrumento })
+    .eq("id", uid)
+    .select("instrumento")
+    .single());
+};
+          entrar: async (e, s) => ok(await sb.auth.signInWithPassword({ email: e, password: s })),
     cadastrar: async f => ok(await sb.auth.signUp({ email: f.email, password: f.senha, options: { data: { nome: f.nome, idade: f.idade, nivel: f.nivel } } })),
     sair: () => sb.auth.signOut(),
     perfil: async s => ok(await sb.from("profiles").update({ nome: s.nome, idade: s.idade, nivel_musical: s.nivel }).eq("id", s.uid)) };
