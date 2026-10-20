@@ -101,7 +101,26 @@ const menuCurso = () => `
     </div>
   </section>
 `;
-const jornada = () => `<section class="pg"><h2>Jornada musical</h2>${barra(pct())}<p class="mute">${pct()}% concluído</p>
+const jornada = () => `<section class="pg"><h2>Jornada musical</h2>
+${!S.instrumento ? `
+<div class="card" style="margin:20px 0">
+  <h3>🎵 Qual instrumento você toca?</h3>
+  <p>Escolha seu instrumento para personalizar seus estudos.</p>
+  <select id="instrumento-aluno" style="width:100%;padding:12px;margin:10px 0">
+    <option value="">Selecione seu instrumento</option>
+    <option value="violino">Violino</option>
+    <option value="viola">Viola</option>
+    <option value="violoncelo">Violoncelo</option>
+    <option value="tuba">Tuba</option>
+    <option value="trompete">Trompete</option>
+    <option value="clarinete">Clarinete</option>
+    <option value="flauta">Flauta transversal</option>
+    <option value="orgao">Órgão</option>
+  </select>
+  <p class="mute">A escolha será salva em uma próxima etapa.</p>
+</div>
+` : `<p>🎼 Instrumento escolhido: ${esc(S.instrumento)}</p>`}
+${barra(pct())}<p class="mute">${pct()}% concluído</p>
 ${STAGES.map(e => {
   const ls = LESSONS.filter(l => l.etapa === e.id), f = ls.filter(l => S.feitas.includes(l.id)).length, at = proxima();
   return `<div class="etapa"><header><p class="mute">Etapa ${String(e.id).padStart(2, "0")}${ls.length ? ` · ${f}/${ls.length}` : ""}</p><h3>${e.nome}</h3><p class="mute">${e.desc}</p></header>
