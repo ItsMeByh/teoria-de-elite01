@@ -120,11 +120,9 @@ ${!S.admin && !S.instrumento ? `
 <button class="btn" type="button" id="confirmar-instrumento" data-act="salvar-instrumento">
 </button>
 </div>
-` : S.admin && !S.instrumento
+` : S.admin
   ? `<p class="mute">🛠️ Modo administrador: você poderá testar todos os instrumentos.</p>`
-` : S.admin && !S.instrumento
-  ? `<p class="mute">🛠️ Modo administrador: você poderá testar todos os instrumentos.</p>`
-  : `<p>🎼 Instrumento escolhido: ${esc(S.instrumento)}</p>`}
+  : `<p class="mute">🎼 Instrumento escolhido: ${esc(S.instrumento)}</p>`}
 ${barra(pct())}<p class="mute">${pct()}% concluído</p>
 ${STAGES.map(e => {
   const ls = LESSONS.filter(l => l.etapa === e.id), f = ls.filter(l => S.feitas.includes(l.id)).length, at = proxima();
