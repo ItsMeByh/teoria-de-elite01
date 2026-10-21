@@ -117,7 +117,9 @@ ${!S.admin && !S.instrumento ? `
     <option value="flauta">Flauta transversal</option>
     <option value="orgao">Órgão</option>
   </select>
-  <p class="mute">A escolha será salva em uma próxima etapa.</p>
+<button class="btn" type="button" id="confirmar-instrumento">
+  Confirmar instrumento
+</button>
 </div>
 ` : S.admin && !S.instrumento
   ? `<p class="mute">🛠️ Modo administrador: você poderá testar todos os instrumentos.</p>`
