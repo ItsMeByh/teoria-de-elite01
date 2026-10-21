@@ -323,7 +323,36 @@ function render() {
 
 document.addEventListener("click", e => {
   const botaoOuvir = e.target.closest('[data-act="ouvir-nota"]');
+const botaoInstrumento = e.target.closest('[data-act="salvar-instrumento"]');
 
+  if (botaoInstrumento) {
+    const seletor = document.querySelector("#instrumento-aluno");
+    const instrumento = seletor?.value;
+
+    if (!instrumento) {
+      alert("Selecione seu instrumento primeiro.");
+      return;
+    }
+
+    if (!S || !S.uid || S.admin) return;
+
+    botaoInstrumento.disabled = true;
+
+    DB.salvarInstrumento(S.uid, instrumento)
+      .then(() => {
+        S.instrumento = instrumento;
+        save();
+        alert("Instrumento salvo com sucesso!");
+        render();
+      })
+      .catch(erro => {
+        console.error(erro);
+        alert("Não foi possível salvar o instrumento. Tente novamente.");
+        botaoInstrumento.disabled = false;
+      });
+
+    return;
+  }
 if (botaoOuvir) {
   if (!window.DesafioOuvido) {
     alert("O jogo ainda não foi carregado.");
