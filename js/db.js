@@ -23,6 +23,7 @@ const DB = (() => {
       admin: P.is_admin,
     inicio_curso: P.inicio_curso,
       instrumento: P.instrumento || null,
+     modo_estudo: P.modo_estudo || "focado",
       is_blocked: P.is_blocked,
       nome: P.nome, idade: P.idade, nivel: P.nivel_musical, xp: G.xp, estrelas: G.estrelas, streak: G.streak, dia: G.dia || "", hist: G.hist || [],
       feitas: ok(a).map(x => x.lesson_id), conquistas: ok(q).map(x => x.achievement_id), simulados: ok(v).map(x => ({ a: x.acertos, n: x.total, p: x.nota })) };
