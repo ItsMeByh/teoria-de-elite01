@@ -138,12 +138,15 @@ async function admBloquear(id, bloquear) {
   if (error) throw error;
   return data;
 }
-   const salvarInstrumento = async (uid, instrumento) => {
+const salvarInstrumento = async (uid, instrumento, modoEstudo) => {
   return ok(await sb
     .from("profiles")
-    .update({ instrumento: instrumento })
+    .update({
+      instrumento: instrumento,
+      modo_estudo: modoEstudo
+    })
     .eq("id", uid)
-    .select("instrumento")
+    .select("instrumento, modo_estudo")
     .single());
 };
  return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear, salvarInstrumento,
