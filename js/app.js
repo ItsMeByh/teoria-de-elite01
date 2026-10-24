@@ -147,6 +147,26 @@ const feita = S.feitas.includes(l.id), ab = livre(l), st = feita ? "feita" : ab 
 }).join("")}</section>`;
 
 let okq = new Set();
+function desenharPentagrama() {
+  return `
+    <div class="card" style="margin:18px 0">
+      <h3>🎼 Pratique sua leitura musical</h3>
+
+      <svg viewBox="0 0 400 150"
+           style="width:100%;max-width:500px"
+           role="img"
+           aria-label="Pentagrama com cinco linhas">
+
+        <line x1="30" y1="30" x2="370" y2="30" stroke="currentColor" />
+        <line x1="30" y1="50" x2="370" y2="50" stroke="currentColor" />
+        <line x1="30" y1="70" x2="370" y2="70" stroke="currentColor" />
+        <line x1="30" y1="90" x2="370" y2="90" stroke="currentColor" />
+        <line x1="30" y1="110" x2="370" y2="110" stroke="currentColor" />
+
+      </svg>
+    </div>
+  `;
+}
 function aula(id) {
   const l = LESSONS.find(x => x.id == id);
   if (!l) return `<section class="pg"><h2>Aula não encontrada</h2><a class="btn" href="#/jornada">Voltar</a></section>`;
