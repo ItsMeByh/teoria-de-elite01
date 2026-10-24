@@ -1,6 +1,19 @@
 const $ = (s, r = document) => r.querySelector(s);
 const KEY = "te:v1";
 const NIVEIS = ["Iniciante", "Aprendiz", "Leitor", "Músico", "Maestro"];
+const CLAVES_INSTRUMENTOS = {
+  violino: "Clave de Sol",
+  viola: "Clave de Dó na 3ª linha",
+  violoncelo: "Clave de Fá na 4ª linha",
+  tuba: "Clave de Fá",
+  trompete: "Clave de Sol",
+  clarinete: "Clave de Sol",
+  flauta: "Clave de Sol",
+  orgao: "Claves de Sol e Fá"
+};
+
+const claveDoInstrumento = instrumento =>
+  CLAVES_INSTRUMENTOS[instrumento] || "Clave não definida";
 const NIVEIS_CONHEC = ["Não sei nada", "Sei pouco", "Sei o básico", "Sei bastante coisa", "Avançado"];
 let S = null;
 try { S = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
