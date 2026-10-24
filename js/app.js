@@ -388,7 +388,7 @@ const modoEstudo = document.querySelector("#modo-estudo")?.value;
 
     botaoInstrumento.disabled = true;
 
-    DB.salvarInstrumento(S.uid, instrumento)
+   DB.salvarInstrumento(S.uid, instrumento, modoEstudo)
       .then(() => {
         S.instrumento = instrumento;
         save();
