@@ -378,7 +378,7 @@ const botaoInstrumento = e.target.closest('[data-act="salvar-instrumento"]');
   if (botaoInstrumento) {
     const seletor = document.querySelector("#instrumento-aluno");
     const instrumento = seletor?.value;
-
+const modoEstudo = document.querySelector("#modo-estudo")?.value;
     if (!instrumento) {
       alert("Selecione seu instrumento primeiro.");
       return;
