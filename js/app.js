@@ -185,6 +185,7 @@ const claveAluno = S.admin
 ${claveAluno ? `<div class="card" style="margin:18px 0">
   <p>🎼 <b>Sua clave principal:</b> ${esc(claveAluno)}</p>
 </div>` : ""}
+${l.id === 8 ? desenharPentagrama() : ""}
 <h3>Quiz</h3>${l.quiz.map((q, i) => `<div class="q"><p>${q.q}</p>${q.o.map((o, j) => `<button class="op" data-act="resp" data-q="${i}" data-o="${j}">${o}</button>`).join("")}</div>`).join("")}
 <div class="card"><b>Resumo:</b> ${l.resumo}</div><p style="margin-top:22px">
 <button class="btn" id="concluir" data-act="concluir" ${feita || okq.size === l.quiz.length ? "" : "disabled"}>${feita ? "AULA CONCLUÍDA ✓" : "CONCLUIR AULA"}</button></p></section>`;
