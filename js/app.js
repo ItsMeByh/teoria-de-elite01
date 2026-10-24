@@ -154,6 +154,11 @@ function aula(id) {
   const e = STAGES.find(x => x.id === l.etapa);
   if (!l.corpo) return `<section class="pg"><p class="mute">Etapa ${e.id} · ${e.nome}</p><h2>${l.titulo}</h2>${guia("Esta aula está em preparação.")}<a class="btn" href="#/jornada">Voltar à jornada</a></section>`;
   const feita = S.feitas.includes(l.id);
+const claveAluno = S.admin
+  ? null
+  : S.instrumento
+    ? claveDoInstrumento(S.instrumento)
+    : null;
   okq = new Set(feita ? l.quiz.map((_, i) => i) : []);
   return `<section class="pg"><p class="mute">Etapa ${e.id} · ${e.nome} · Aula ${l.id}</p><h2>${l.titulo}</h2>
 <p><b>Objetivo:</b> ${l.objetivo}</p><div class="card" style="margin:18px 0">${l.corpo.map(p => `<p>${p}</p>`).join("")}</div>
