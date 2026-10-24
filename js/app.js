@@ -162,7 +162,10 @@ function desenharPentagrama() {
         <line x1="30" y1="70" x2="370" y2="70" stroke="currentColor" />
         <line x1="30" y1="90" x2="370" y2="90" stroke="currentColor" />
         <line x1="30" y1="110" x2="370" y2="110" stroke="currentColor" />
-
+<text x="40" y="107"
+      font-size="95"
+      font-family="serif"
+      fill="currentColor">𝄞</text>
       </svg>
     </div>
   `;
