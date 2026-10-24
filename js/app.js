@@ -130,6 +130,14 @@ ${!S.admin && !S.instrumento ? `
     <option value="flauta">Flauta transversal</option>
     <option value="orgao">Órgão</option>
   </select>
+<h3>🎓 Como você deseja estudar?</h3>
+
+<p>Escolha como prefere aprender as claves musicais.</p>
+
+<select id="modo-estudo" style="width:100%;padding:12px;margin:10px 0">
+  <option value="focado">🎻 Focado no meu instrumento</option>
+  <option value="completo">🎼 Estudo completo — diferentes claves</option>
+</select>
 <button class="btn" type="button" id="confirmar-instrumento" data-act="salvar-instrumento">
 </button>
 </div>
