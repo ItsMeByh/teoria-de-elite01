@@ -391,6 +391,7 @@ const modoEstudo = document.querySelector("#modo-estudo")?.value;
    DB.salvarInstrumento(S.uid, instrumento, modoEstudo)
       .then(() => {
         S.instrumento = instrumento;
+      S.modo_estudo = modoEstudo;
         save();
         alert("Instrumento salvo com sucesso!");
         render();
