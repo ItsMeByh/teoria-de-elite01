@@ -186,10 +186,13 @@ function desenharPentagrama() {
         <line x1="30" y1="70" x2="370" y2="70" stroke="currentColor" />
         <line x1="30" y1="90" x2="370" y2="90" stroke="currentColor" />
         <line x1="30" y1="110" x2="370" y2="110" stroke="currentColor" />
-<text x="40" y="107"
-      font-size="95"
-      font-family="serif"
-      fill="currentColor">𝄞</text>
+<text
+  x="40"
+  y="${claveAtual === 'fa' ? 73 : claveAtual === 'do' ? 91 : 107}"
+  font-size="${claveAtual === 'fa' ? 65 : claveAtual === 'do' ? 70 : 95}"
+  font-family="serif"
+  fill="currentColor"
+>${claveAtual === 'fa' ? '𝄢' : claveAtual === 'do' ? '𝄡' : '𝄞'}</text>
       </svg>
     </div>
   `;
