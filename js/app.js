@@ -156,6 +156,22 @@ const feita = S.feitas.includes(l.id), ab = livre(l), st = feita ? "feita" : ab 
 
 let okq = new Set();
 function desenharPentagrama() {
+ const modo = S?.modo_estudo || "focado";
+  const instrumento = S?.instrumento || "violino";
+
+  const claves = {
+    violino: "sol",
+    viola: "do",
+    violoncelo: "fa",
+    tuba: "fa",
+    trompete: "sol",
+    clarinete: "sol",
+    flauta: "sol",
+    orgao: "sol"
+  };
+
+  const clavePrincipal = claves[instrumento] || "sol";
+  const claveAtual = modo === "focado" ? clavePrincipal : "sol";
   return `
     <div class="card" style="margin:18px 0">
       <h3>🎼 Pratique sua leitura musical</h3>
