@@ -424,6 +424,40 @@ function render() {
 }
 
 document.addEventListener("click", e => {
+ const botaoLeitura = e.target.closest('[data-act="responder-leitura"]');
+
+if (botaoLeitura) {
+  const modo = S?.modo_estudo || "focado";
+  const instrumento = S?.instrumento || "violino";
+
+  let respostaCorreta = "Si";
+
+  if (modo === "focado") {
+    if (instrumento === "viola") {
+      respostaCorreta = "Dó";
+    }
+
+    if (instrumento === "violoncelo" || instrumento === "tuba") {
+      respostaCorreta = "Ré";
+    }
+  }
+
+  const respostaAluno = botaoLeitura.dataset.nota;
+  const resultado = document.querySelector("#resultado-leitura");
+
+  if (respostaAluno === respostaCorreta) {
+    resultado.textContent = "✅ Parabéns! Você acertou!";
+    resultado.style.color = "#75d88a";
+
+    botaoLeitura.parentElement.querySelectorAll("button")
+      .forEach(botao => botao.disabled = true);
+  } else {
+    resultado.textContent = "❌ Não foi dessa vez! Tente novamente.";
+    resultado.style.color = "#ff8585";
+  }
+
+  return;
+}
   const botaoOuvir = e.target.closest('[data-act="ouvir-nota"]');
 const botaoInstrumento = e.target.closest('[data-act="salvar-instrumento"]');
 
