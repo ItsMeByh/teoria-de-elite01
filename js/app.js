@@ -211,6 +211,22 @@ function desenharPentagrama() {
   stroke-width="2.5"
 />  
       </svg>
+   <p><b>🎵 Qual nota está desenhada no pentagrama?</b></p>
+
+<div class="opcoes-leitura">
+  ${["Dó", "Ré", "Si", "Sol"].map(nota => `
+    <button
+      type="button"
+      class="op"
+      data-act="responder-leitura"
+      data-nota="${nota}"
+    >
+      ${nota}
+    </button>
+  `).join("")}
+</div>
+
+<p id="resultado-leitura"></p>
     </div>
   `;
 }
