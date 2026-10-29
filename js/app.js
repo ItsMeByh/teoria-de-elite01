@@ -193,6 +193,23 @@ function desenharPentagrama() {
   font-family="serif"
   fill="currentColor"
 >${claveAtual === 'fa' ? '𝄢' : claveAtual === 'do' ? '𝄡' : '𝄞'}</text>
+   <ellipse
+  cx="220"
+  cy="70"
+  rx="12"
+  ry="8"
+  transform="rotate(-20 220 70)"
+  fill="currentColor"
+/>
+
+<line
+  x1="231"
+  y1="68"
+  x2="231"
+  y2="23"
+  stroke="currentColor"
+  stroke-width="2.5"
+/>  
       </svg>
     </div>
   `;
