@@ -234,8 +234,7 @@ opcoesLeitura.splice(indiceNotaLeitura % 4, 0, resposta);
       </svg>
    <p><b>🎵 Qual nota está desenhada no pentagrama?</b></p>
 
-<div class="opcoes-leitura">
-${[...new Set([notaAtual[claveAtual], "Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"])].slice(0, 4).map(nota => `
+${opcoesLeitura.map(nota => `
     <button
       type="button"
       class="op"
