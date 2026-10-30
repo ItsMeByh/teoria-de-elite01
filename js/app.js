@@ -233,7 +233,7 @@ opcoesLeitura.splice(indiceNotaLeitura % 4, 0, resposta);
 />
       </svg>
    <p><b>🎵 Qual nota está desenhada no pentagrama?</b></p>
-
+<div class="opcoes-leitura">
 ${opcoesLeitura.map(nota => `
     <button
       type="button"
