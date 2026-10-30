@@ -205,23 +205,23 @@ const notaAtual = notasLeitura[
   font-family="serif"
   fill="currentColor"
 >${claveAtual === 'fa' ? '𝄢' : claveAtual === 'do' ? '𝄡' : '𝄞'}</text>
-   <ellipse
+<ellipse
   cx="220"
-  cy="70"
+  cy="${notaAtual.y}"
   rx="12"
   ry="8"
-  transform="rotate(-20 220 70)"
+  transform="rotate(-20 220 ${notaAtual.y})"
   fill="currentColor"
 />
 
 <line
-  x1="231"
-  y1="68"
-  x2="231"
-  y2="23"
+  x1="${notaAtual.y <= 50 ? 209 : 231}"
+  y1="${notaAtual.y <= 50 ? notaAtual.y + 2 : notaAtual.y - 2}"
+  x2="${notaAtual.y <= 50 ? 209 : 231}"
+  y2="${notaAtual.y <= 50 ? notaAtual.y + 47 : notaAtual.y - 47}"
   stroke="currentColor"
   stroke-width="2.5"
-/>  
+/>
       </svg>
    <p><b>🎵 Qual nota está desenhada no pentagrama?</b></p>
 
