@@ -239,6 +239,16 @@ const notaAtual = notasLeitura[
 </div>
 
 <p id="resultado-leitura"></p>
+
+ <button
+  type="button"
+  class="btn"
+  id="proxima-nota-leitura"
+  data-act="proxima-nota-leitura"
+  disabled
+>
+  🎵 Próxima nota
+</button>
     </div>
   `;
 }
