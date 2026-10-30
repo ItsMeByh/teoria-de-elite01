@@ -185,7 +185,7 @@ const notaAtual = notasLeitura[
   indiceNotaLeitura % notasLeitura.length
 ];
   return `
-    <div class="card" style="margin:18px 0">
+  <div id="exercicio-leitura" class="card" style="margin:18px 0">
       <h3>🎼 Pratique sua leitura musical</h3>
 
       <svg viewBox="0 0 400 150"
