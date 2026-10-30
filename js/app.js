@@ -474,7 +474,6 @@ if (botaoProximaNota) {
 if (botaoLeitura) {
  const exercicio = document.querySelector("#exercicio-leitura");
 const respostaCorreta = exercicio?.dataset.resposta;
-  }
 
   const respostaAluno = botaoLeitura.dataset.nota;
   const resultado = document.querySelector("#resultado-leitura");
