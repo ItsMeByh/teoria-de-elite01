@@ -446,7 +446,22 @@ function render() {
 }
 
 document.addEventListener("click", e => {
- const botaoLeitura = e.target.closest('[data-act="responder-leitura"]');
+const botaoProximaNota = e.target.closest(
+  '[data-act="proxima-nota-leitura"]'
+);
+
+if (botaoProximaNota) {
+  indiceNotaLeitura++;
+
+  const exercicio = document.querySelector("#exercicio-leitura");
+
+  if (exercicio) {
+    exercicio.outerHTML = desenharPentagrama();
+  }
+
+  return;
+}
+  const botaoLeitura = e.target.closest('[data-act="responder-leitura"]');
 
 if (botaoLeitura) {
   const modo = S?.modo_estudo || "focado";
