@@ -226,7 +226,7 @@ const notaAtual = notasLeitura[
    <p><b>🎵 Qual nota está desenhada no pentagrama?</b></p>
 
 <div class="opcoes-leitura">
-  ${["Dó", "Ré", "Si", "Sol"].map(nota => `
+${[...new Set([notaAtual[claveAtual], "Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"])].slice(0, 4).map(nota => `
     <button
       type="button"
       class="op"
