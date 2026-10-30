@@ -155,8 +155,9 @@ const feita = S.feitas.includes(l.id), ab = livre(l), st = feita ? "feita" : ab 
 }).join("")}</section>`;
 
 let okq = new Set();
+let indiceNotaLeitura = 0;
 function desenharPentagrama() {
-  const modo = S?.modo_estudo || "focado";
+ const modo = S?.modo_estudo || "focado";
   const instrumento = S?.instrumento || "violino";
 
   const claves = {
