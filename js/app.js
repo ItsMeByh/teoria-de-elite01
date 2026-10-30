@@ -173,6 +173,17 @@ function desenharPentagrama() {
 
   const clavePrincipal = claves[instrumento] || "sol";
   const claveAtual = modo === "focado" ? clavePrincipal : "sol";
+  const notasLeitura = [
+  { y: 70, sol: "Si", fa: "Ré", do: "Dó" },
+  { y: 90, sol: "Sol", fa: "Si", do: "Lá" },
+  { y: 50, sol: "Ré", fa: "Fá", do: "Mi" },
+  { y: 110, sol: "Mi", fa: "Sol", do: "Fá" },
+  { y: 30, sol: "Fá", fa: "Lá", do: "Sol" }
+];
+
+const notaAtual = notasLeitura[
+  indiceNotaLeitura % notasLeitura.length
+];
   return `
     <div class="card" style="margin:18px 0">
       <h3>🎼 Pratique sua leitura musical</h3>
