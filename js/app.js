@@ -485,7 +485,8 @@ if (botaoLeitura) {
   if (respostaAluno === respostaCorreta) {
     resultado.textContent = "✅ Parabéns! Você acertou!";
     resultado.style.color = "#75d88a";
-
+const proximaNota = document.querySelector("#proxima-nota-leitura");
+if (proximaNota) proximaNota.disabled = false;
     botaoLeitura.parentElement.querySelectorAll("button")
       .forEach(botao => botao.disabled = true);
   } else {
