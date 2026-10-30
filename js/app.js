@@ -184,6 +184,15 @@ function desenharPentagrama() {
 const notaAtual = notasLeitura[
   indiceNotaLeitura % notasLeitura.length
 ];
+ const resposta = notaAtual[claveAtual];
+
+const outrasNotas = ["Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"]
+  .filter(nota => nota !== resposta)
+  .slice(0, 3);
+
+const opcoesLeitura = [...outrasNotas];
+
+opcoesLeitura.splice(indiceNotaLeitura % 4, 0, resposta);
   return `
 <div id="exercicio-leitura" class="card" data-resposta="${notaAtual[claveAtual]}" style="margin:18px 0">
       <h3>🎼 Pratique sua leitura musical</h3>
