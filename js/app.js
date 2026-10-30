@@ -464,19 +464,8 @@ if (botaoProximaNota) {
   const botaoLeitura = e.target.closest('[data-act="responder-leitura"]');
 
 if (botaoLeitura) {
-  const modo = S?.modo_estudo || "focado";
-  const instrumento = S?.instrumento || "violino";
-
-  let respostaCorreta = "Si";
-
-  if (modo === "focado") {
-    if (instrumento === "viola") {
-      respostaCorreta = "Dó";
-    }
-
-    if (instrumento === "violoncelo" || instrumento === "tuba") {
-      respostaCorreta = "Ré";
-    }
+ const exercicio = document.querySelector("#exercicio-leitura");
+const respostaCorreta = exercicio?.dataset.resposta;
   }
 
   const respostaAluno = botaoLeitura.dataset.nota;
