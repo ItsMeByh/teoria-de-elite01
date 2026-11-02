@@ -635,7 +635,7 @@ const LESSONS = [
       c: 0
     }
   ]
-}
+},
 
 ];
 
