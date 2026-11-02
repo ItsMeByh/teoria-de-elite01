@@ -669,6 +669,7 @@ if (u) {
 }
   render();
 }
+}
 document.addEventListener("click", async e => {
   const botaoBloqueio = e.target.closest("#bloquear-aluno");
 if (botaoBloqueio) {
