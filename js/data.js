@@ -636,7 +636,204 @@ const LESSONS = [
     }
   ]
 },
-
+{
+  id: 17,
+  etapa: 3,
+  titulo: "Ligadura de Valor",
+  objetivo: "Aprender como unir a duração de duas notas de mesma altura.",
+  corpo: [
+    "🎵 A ligadura de valor é uma linha curva que une duas notas de mesma altura.",
+    "Quando duas notas estão ligadas, tocamos um único som durante a soma de suas durações.",
+    "🎼 EXEMPLO: uma mínima de 2 tempos ligada a uma semínima de 1 tempo forma um som sustentado por 3 tempos.",
+    "A ligadura de valor também pode unir notas separadas por uma barra de compasso.",
+    "💡 CURIOSIDADE: a ligadura ajuda a escrever sons longos sem precisar criar uma figura musical diferente.",
+    "👏 PRATIQUE: conte três tempos mantendo um único som, sem interrompê-lo."
+  ],
+  resumo: "A ligadura de valor soma as durações de notas de mesma altura, formando um único som.",
+  quiz: [
+    { q: "Qual é a função da ligadura de valor?", o: ["Aumentar a intensidade", "Somar durações", "Acelerar a música"], c: 1 },
+    { q: "A ligadura de valor une notas de qual altura?", o: ["Mesma altura", "Alturas sempre diferentes", "Qualquer altura sem distinção"], c: 0 },
+    { q: "Uma mínima ligada a uma semínima, valendo 2 e 1 tempos, dura quanto?", o: ["1 tempo", "2 tempos", "3 tempos"], c: 2 },
+    { q: "As notas ligadas por ligadura de valor são tocadas como:", o: ["Um som contínuo", "Dois sons separados", "Uma pausa"], c: 0 },
+    { q: "A ligadura de valor pode atravessar uma barra de compasso?", o: ["Não", "Sim", "Somente no final da música"], c: 1 }
+  ]
+},
+{
+  id: 18,
+  etapa: 3,
+  titulo: "Ligadura de Expressão",
+  objetivo: "Reconhecer a ligadura de expressão e compreender sua função musical.",
+  corpo: [
+    "🎼 A ligadura de expressão é uma linha curva que indica que um grupo de notas deve ser executado de maneira ligada.",
+    "Ela orienta a articulação musical, ajudando a criar frases suaves e contínuas.",
+    "🎵 DIFERENÇA: a ligadura de valor soma durações; a ligadura de expressão orienta a maneira de tocar as notas.",
+    "No violino, por exemplo, várias notas sob uma ligadura podem ser executadas em um mesmo movimento do arco.",
+    "💡 CURIOSIDADE: o modo de executar uma ligadura pode variar conforme o instrumento.",
+    "👏 PRATIQUE: cante Dó, Ré e Mi suavemente, tentando ligar os três sons."
+  ],
+  resumo: "A ligadura de expressão indica uma execução ligada, enquanto a ligadura de valor soma durações.",
+  quiz: [
+    { q: "O que indica a ligadura de expressão?", o: ["Uma pausa", "Notas executadas de maneira ligada", "Aumento de 50%"], c: 1 },
+    { q: "Qual ligadura soma a duração das notas?", o: ["Ligadura de valor", "Ligadura de expressão", "Nenhuma"], c: 0 },
+    { q: "A ligadura de expressão ajuda a criar:", o: ["Frases musicais ligadas", "Silêncio obrigatório", "Compassos extras"], c: 0 },
+    { q: "A execução da ligadura pode variar conforme o instrumento?", o: ["Sim", "Não", "Nunca"], c: 0 },
+    { q: "A ligadura de expressão determina que todas as notas tenham a mesma altura?", o: ["Sim", "Não", "Somente no violino"], c: 1 }
+  ]
+},
+{
+  id: 19,
+  etapa: 3,
+  titulo: "Fermata",
+  objetivo: "Compreender o sinal de fermata e sua influência na duração musical.",
+  corpo: [
+    "🎵 A fermata é um sinal musical que permite prolongar uma nota ou pausa além do valor escrito.",
+    "Seu símbolo se parece com um pequeno arco com um ponto abaixo dele.",
+    "🎼 IMPORTANTE: a fermata não determina uma quantidade fixa de tempos extras.",
+    "A duração depende da interpretação musical e, quando houver, da orientação do regente.",
+    "💡 CURIOSIDADE: a fermata pode criar momentos de grande expectativa em uma apresentação.",
+    "👏 PRATIQUE: sustente uma nota e prolongue seu som um pouco além da duração escrita."
+  ],
+  resumo: "A fermata indica o prolongamento de uma nota ou pausa, sem determinar uma duração fixa.",
+  quiz: [
+    { q: "Qual é a função da fermata?", o: ["Diminuir sempre a duração", "Prolongar uma nota ou pausa", "Repetir um compasso"], c: 1 },
+    { q: "A fermata acrescenta sempre 50% da duração?", o: ["Sim", "Não", "Somente em semínimas"], c: 1 },
+    { q: "A fermata pode aparecer sobre uma pausa?", o: ["Sim", "Não", "Nunca"], c: 0 },
+    { q: "Quem pode orientar a duração de uma fermata em uma execução coletiva?", o: ["O regente", "A barra de compasso", "O nome da nota"], c: 0 },
+    { q: "A fermata pode criar qual efeito?", o: ["Expectativa musical", "Mudança automática de clave", "Nova nota musical"], c: 0 }
+  ]
+},
+{
+  id: 20,
+  etapa: 3,
+  titulo: "Sinais de Repetição",
+  objetivo: "Identificar sinais que indicam a repetição de trechos musicais.",
+  corpo: [
+    "🎼 Algumas músicas possuem partes que devem ser tocadas mais de uma vez.",
+    "Para evitar escrever o mesmo trecho novamente, utilizamos sinais de repetição.",
+    "🎵 A barra de repetição final, representada por :||, indica que devemos voltar e repetir um trecho.",
+    "Se houver uma barra de repetição inicial correspondente, voltamos até ela. Caso contrário, normalmente retornamos ao começo.",
+    "💡 CURIOSIDADE: os sinais de repetição deixam as partituras mais curtas e organizadas.",
+    "👏 PRATIQUE: bata quatro palmas e depois repita a mesma sequência."
+  ],
+  resumo: "Os sinais de repetição indicam trechos que devem ser executados novamente.",
+  quiz: [
+    { q: "Para que servem os sinais de repetição?", o: ["Repetir trechos musicais", "Aumentar o volume", "Alterar a clave"], c: 0 },
+    { q: "Qual símbolo pode indicar o final de um trecho a repetir?", o: ["𝄽", ":||", "♯"], c: 1 },
+    { q: "Por que utilizar sinais de repetição?", o: ["Para evitar escrever trechos iguais novamente", "Para apagar notas", "Para mudar o instrumento"], c: 0 },
+    { q: "Se existir uma barra inicial correspondente, para onde voltamos?", o: ["Para ela", "Sempre para a última nota", "Para a próxima página"], c: 0 },
+    { q: "A repetição modifica obrigatoriamente o valor das figuras?", o: ["Sim", "Não", "Somente das pausas"], c: 1 }
+  ]
+},
+{
+  id: 21,
+  etapa: 3,
+  titulo: "Andamento Musical",
+  objetivo: "Entender como o andamento determina a velocidade de execução musical.",
+  corpo: [
+    "🎵 O andamento indica a velocidade com que executamos uma música.",
+    "Uma música pode ter andamento lento, moderado ou rápido.",
+    "🎼 Algumas indicações tradicionais são Largo, Andante, Moderato e Allegro.",
+    "Também podemos encontrar indicações em BPM, que significa batidas por minuto.",
+    "💡 CURIOSIDADE: um metrônomo ajuda os músicos a manter o andamento durante o estudo.",
+    "👏 PRATIQUE: bata palmas devagar e depois aumente a velocidade, mantendo a regularidade."
+  ],
+  resumo: "O andamento indica a velocidade da música e pode ser expresso por palavras ou BPM.",
+  quiz: [
+    { q: "O que o andamento indica?", o: ["A velocidade da música", "O nome da nota", "A altura do pentagrama"], c: 0 },
+    { q: "Qual indicação costuma representar andamento rápido?", o: ["Largo", "Allegro", "Lento"], c: 1 },
+    { q: "O que significa BPM?", o: ["Batidas por minuto", "Barras por melodia", "Baixos por música"], c: 0 },
+    { q: "Qual equipamento ajuda a manter a pulsação regular?", o: ["Metrônomo", "Estante", "Afinador de arco"], c: 0 },
+    { q: "Andamento e intensidade significam a mesma coisa?", o: ["Sim", "Não", "Sempre"], c: 1 }
+  ]
+},
+{
+  id: 22,
+  etapa: 3,
+  titulo: "Intensidade e Dinâmica",
+  objetivo: "Compreender como a dinâmica indica variações de intensidade sonora.",
+  corpo: [
+    "🎵 A dinâmica musical orienta a intensidade com que os sons devem ser executados.",
+    "A letra p significa piano, uma indicação de execução suave.",
+    "A letra f significa forte, uma indicação de execução com maior intensidade.",
+    "🎼 Crescendo significa aumentar gradualmente a intensidade. Diminuendo indica diminuí-la gradualmente.",
+    "💡 CURIOSIDADE: uma música pode transmitir sensações diferentes apenas mudando sua dinâmica.",
+    "👏 PRATIQUE: cante uma nota suavemente, aumente o volume aos poucos e depois diminua."
+  ],
+  resumo: "A dinâmica orienta a intensidade da música, incluindo piano, forte, crescendo e diminuendo.",
+  quiz: [
+    { q: "O que indica a dinâmica musical?", o: ["A intensidade sonora", "O número de linhas", "O nome da clave"], c: 0 },
+    { q: "O que significa p?", o: ["Piano, execução suave", "Pausa", "Presto"], c: 0 },
+    { q: "O que significa f?", o: ["Fraco", "Forte", "Fermata"], c: 1 },
+    { q: "O que significa crescendo?", o: ["Aumentar gradualmente a intensidade", "Acelerar obrigatoriamente", "Parar de tocar"], c: 0 },
+    { q: "O que significa diminuendo?", o: ["Aumentar o volume", "Diminuir gradualmente a intensidade", "Repetir a música"], c: 1 }
+  ]
+},
+{
+  id: 23,
+  etapa: 3,
+  titulo: "Legato e Staccato",
+  objetivo: "Conhecer duas maneiras diferentes de articular os sons musicais.",
+  corpo: [
+    "🎼 Articulação musical é a maneira como iniciamos, ligamos ou separamos os sons.",
+    "🎵 Legato significa executar as notas de maneira ligada e contínua.",
+    "Staccato indica notas executadas de maneira destacada, com separação entre os sons.",
+    "O staccato costuma ser indicado por um pequeno ponto acima ou abaixo da cabeça da nota.",
+    "💡 ATENÇÃO: o ponto de staccato não é o ponto de aumento. O ponto de aumento fica à direita da figura e acrescenta 50% à duração.",
+    "👏 PRATIQUE: toque ou cante três notas ligadas e depois as mesmas três notas separadamente."
+  ],
+  resumo: "Legato indica sons ligados; staccato indica sons destacados e separados.",
+  quiz: [
+    { q: "O que significa legato?", o: ["Notas ligadas", "Notas sempre fortes", "Silêncio"], c: 0 },
+    { q: "O que significa staccato?", o: ["Notas destacadas", "Notas mais longas", "Notas dobradas"], c: 0 },
+    { q: "Onde costuma aparecer o ponto de staccato?", o: ["Acima ou abaixo da nota", "Sempre à direita", "No início do pentagrama"], c: 0 },
+    { q: "O ponto de staccato é igual ao ponto de aumento?", o: ["Sim", "Não", "Somente no compasso 4/4"], c: 1 },
+    { q: "Qual articulação favorece uma execução contínua?", o: ["Staccato", "Legato", "Pausa"], c: 1 }
+  ]
+},
+{
+  id: 24,
+  etapa: 3,
+  titulo: "Revisão de Ritmo e Expressão",
+  objetivo: "Revisar os principais sinais musicais estudados até agora.",
+  corpo: [
+    "🎼 Chegou o momento de revisar o que aprendemos sobre duração e expressão musical.",
+    "O ponto de aumento acrescenta metade da duração original de uma figura.",
+    "A ligadura de valor soma durações; a ligadura de expressão orienta uma execução ligada.",
+    "🎵 A fermata permite prolongar um som ou silêncio. Os sinais de repetição indicam trechos que devem ser tocados novamente.",
+    "O andamento determina a velocidade, enquanto a dinâmica orienta a intensidade.",
+    "👏 DESAFIO: explique com suas próprias palavras a diferença entre legato, staccato e ligadura de valor."
+  ],
+  resumo: "Revisão de ponto de aumento, ligaduras, fermata, repetição, andamento, dinâmica e articulação.",
+  quiz: [
+    { q: "Quanto acrescenta o ponto de aumento?", o: ["25%", "50%", "100%"], c: 1 },
+    { q: "Qual sinal permite somar durações de notas da mesma altura?", o: ["Ligadura de valor", "Staccato", "Fermata"], c: 0 },
+    { q: "O que determina o andamento?", o: ["A intensidade", "A velocidade", "A altura"], c: 1 },
+    { q: "Qual indicação representa execução suave?", o: ["Forte", "Piano", "Crescendo"], c: 1 },
+    { q: "O que indica o staccato?", o: ["Sons destacados", "Sons obrigatoriamente mais fortes", "Notas ligadas"], c: 0 }
+  ]
+},
+{
+  id: 25,
+  etapa: 3,
+  titulo: "Desafio dos Fundamentos Musicais",
+  objetivo: "Consolidar os conhecimentos de leitura, ritmo e expressão musical.",
+  corpo: [
+    "🏆 Parabéns por chegar ao desafio da Aula 25 do Teoria de Elite!",
+    "Até aqui você estudou elementos importantes da escrita musical, como notas, claves, figuras, pausas e sinais de expressão.",
+    "🎼 Um bom músico não aprende apenas os nomes dos símbolos: ele precisa compreender como utilizá-los durante a execução.",
+    "Leia cada pergunta com calma e tente responder sem consultar as aulas anteriores.",
+    "💡 CURIOSIDADE: revisar os fundamentos com frequência ajuda a desenvolver uma leitura musical mais segura.",
+    "👏 MISSÃO FINAL: escolha uma pequena melodia e tente identificar suas notas, figuras, pausas e indicações musicais."
+  ],
+  resumo: "Avaliação de revisão dos fundamentos de leitura, duração e expressão musical.",
+  quiz: [
+    { q: "Quantas linhas possui um pentagrama?", o: ["4", "5", "6"], c: 1 },
+    { q: "Qual sinal aumenta uma figura em 50% de sua duração original?", o: ["Fermata", "Ponto de aumento", "Staccato"], c: 1 },
+    { q: "Uma mínima de 2 tempos ligada por ligadura de valor a uma semínima de 1 tempo dura:", o: ["2 tempos", "3 tempos", "4 tempos"], c: 1 },
+    { q: "Qual termo indica execução ligada?", o: ["Legato", "Staccato", "Forte"], c: 0 },
+    { q: "O que indica um crescendo?", o: ["Diminuir a velocidade", "Aumentar gradualmente a intensidade", "Repetir um compasso"], c: 1 }
+  ]
+}
 ];
 
 const PERIODOS = [
