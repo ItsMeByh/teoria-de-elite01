@@ -713,5 +713,4 @@ document.addEventListener("input", e => {
   if (e.target.id !== "ba") return;
   const v = e.target.value.toLowerCase(); document.querySelectorAll("#al .card").forEach(c => c.hidden = !c.dataset.t.includes(v));
 });
-}
   iniciar();
