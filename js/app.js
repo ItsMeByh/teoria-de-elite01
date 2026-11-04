@@ -462,7 +462,7 @@ const desafioOuvido = () => `
   </section>
 `;
 // ---------- Rotas ----------
-const ROTAS = { "": home, entrada, painel, jornada, historia, materiais, avaliacoes, progresso, sobre, ia, aula, desafioOuvido, curso: menuCurso };
+const ROTAS = { "": home, entrada, painel, jornada, historia, materiais, avaliacoes, progresso, sobre, ia, aula, desafioOuvido, curso: menuCurso, treinadorRitmo };
 const GRUPO = { "": "a", entrada: "a", painel: "a", jornada: "b", aula: "b", historia: "c", materiais: "c", avaliacoes: "b", progresso: "b", sobre: "a", ia: "c" };
 const PUBLICAS = ["", "entrada", "sobre"];
 function render() {
