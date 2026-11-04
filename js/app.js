@@ -94,6 +94,34 @@ ${p ? `<a class="btn" href="#/aula/${p.id}">${S.feitas.length ? "CONTINUAR" : "P
 <h3 style="margin-top:32px">Conquistas</h3><div class="grid">${conqCards()}</div></section>`;
 };
 const conqCards = () => CONQ.map(c => `<div class="card conq ${S.conquistas.includes(c.id) ? "on" : ""}"><h3>${c.nome}</h3><span class="mute">${c.d}</span></div>`).join("");
+const treinadorRitmo = () => `
+  <section class="pg">
+    <h2>🥁 Treinador de Ritmo</h2>
+
+    <p>
+      Aprenda a reconhecer figuras musicais,
+      contar os tempos e desenvolver seu ritmo!
+    </p>
+
+    <div class="card" style="margin:20px 0">
+      <h3>🎼 Nível 1 — Valores musicais</h3>
+
+      <p>
+        Aqui você aprenderá a identificar
+        a duração das figuras e pausas.
+      </p>
+
+      <p class="mute">
+        Os exercícios interativos serão
+        adicionados na próxima etapa.
+      </p>
+    </div>
+
+    <a class="btn" href="#/curso">
+      Voltar ao curso
+    </a>
+  </section>
+`;
 const menuCurso = () => `
   <section class="pg">
     <h2>🎓 Curso — Teoria de Elite</h2>
