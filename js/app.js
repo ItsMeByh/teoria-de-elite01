@@ -132,6 +132,11 @@ const menuCurso = () => `
         <h3>📚 Aulas</h3>
         <p>Continue seus estudos de teoria musical.</p>
         <span>Entrar nas aulas →</span>
+   <a class="card" href="#/desafioOuvido">
+  <h3>🎧 Desafio de Ouvido Musical</h3>
+  <p>Escute as notas e teste seu ouvido musical.</p>
+  <span>Começar desafio →</span>
+</a>
     <a class="card" href="#/treinadorRitmo">
   <h3>🥁 Treinador de Ritmo</h3>
   <p>Aprenda a contar tempos e reconhecer figuras musicais.</p>
