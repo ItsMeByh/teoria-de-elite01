@@ -97,31 +97,72 @@ const conqCards = () => CONQ.map(c => `<div class="card conq ${S.conquistas.incl
 const treinadorRitmo = () => `
   <section class="pg">
     <h2>🥁 Treinador de Ritmo</h2>
-
-    <p>
-      Aprenda a reconhecer figuras musicais,
-      contar os tempos e desenvolver seu ritmo!
-    </p>
+    <p>Aprenda a reconhecer figuras musicais e contar os tempos!</p>
 
     <div class="card" style="margin:20px 0">
       <h3>🎼 Nível 1 — Valores musicais</h3>
 
-      <p>
-        Aqui você aprenderá a identificar
-        a duração das figuras e pausas.
-      </p>
+      <p>Considere a semínima valendo 1 tempo.</p>
 
-      <p class="mute">
-        Os exercícios interativos serão
-        adicionados na próxima etapa.
-      </p>
+      <svg viewBox="0 0 200 110"
+           style="width:100%;max-width:220px;display:block;margin:20px auto"
+           role="img"
+           aria-label="Figura musical mínima">
+
+        <ellipse cx="90" cy="72" rx="13" ry="9"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="3"
+                 transform="rotate(-20 90 72)" />
+
+        <line x1="102" y1="69"
+              x2="102" y2="16"
+              stroke="currentColor"
+              stroke-width="3" />
+      </svg>
+
+      <p><b>🎵 Quantos tempos vale essa mínima?</b></p>
+
+      <div class="opcoes-ritmo">
+        <button type="button" class="op" data-ritmo-resposta="1">
+          1 tempo
+        </button>
+
+        <button type="button" class="op" data-ritmo-resposta="2">
+          2 tempos
+        </button>
+
+        <button type="button" class="op" data-ritmo-resposta="4">
+          4 tempos
+        </button>
+      </div>
+
+      <p id="resultado-ritmo" aria-live="polite"></p>
     </div>
 
-    <a class="btn" href="#/curso">
-      Voltar ao curso
-    </a>
+    <a class="btn" href="#/curso">Voltar ao curso</a>
   </section>
 `;
+
+document.addEventListener("click", e => {
+  const botao = e.target.closest("[data-ritmo-resposta]");
+  if (!botao) return;
+
+  const resultado = document.querySelector("#resultado-ritmo");
+  if (!resultado) return;
+
+  if (botao.dataset.ritmoResposta === "2") {
+    resultado.textContent = "✅ Parabéns! Você acertou!";
+    resultado.style.color = "#75d88a";
+
+    document.querySelectorAll(".opcoes-ritmo button")
+      .forEach(b => b.disabled = true);
+
+  } else {
+    resultado.textContent = "❌ Tente novamente!";
+    resultado.style.color = "#ff8585";
+  }
+});
 const menuCurso = () => `
   <section class="pg">
     <h2>🎓 Curso — Teoria de Elite</h2>
