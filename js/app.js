@@ -94,70 +94,119 @@ ${p ? `<a class="btn" href="#/aula/${p.id}">${S.feitas.length ? "CONTINUAR" : "P
 <h3 style="margin-top:32px">Conquistas</h3><div class="grid">${conqCards()}</div></section>`;
 };
 const conqCards = () => CONQ.map(c => `<div class="card conq ${S.conquistas.includes(c.id) ? "on" : ""}"><h3>${c.nome}</h3><span class="mute">${c.d}</span></div>`).join("");
-const treinadorRitmo = () => `
-  <section class="pg">
-    <h2>🥁 Treinador de Ritmo</h2>
-    <p>Aprenda a reconhecer figuras musicais e contar os tempos!</p>
+const figurasRitmo = [
+  { nome: "Semibreve", valor: 4 },
+  { nome: "Mínima", valor: 2 },
+  { nome: "Semínima", valor: 1 },
+  { nome: "Colcheia", valor: 0.5 }
+];
 
-    <div class="card" style="margin:20px 0">
-      <h3>🎼 Nível 1 — Valores musicais</h3>
+let indiceRitmo = 0;
 
-      <p>Considere a semínima valendo 1 tempo.</p>
+const treinadorRitmo = () => {
+  const figura = figurasRitmo[indiceRitmo];
 
-      <svg viewBox="0 0 200 110"
-           style="width:100%;max-width:220px;display:block;margin:20px auto"
-           role="img"
-           aria-label="Figura musical mínima">
+  const preenchimento =
+    figura.nome === "Semibreve" || figura.nome === "Mínima"
+      ? "none"
+      : "currentColor";
 
-        <ellipse cx="90" cy="72" rx="13" ry="9"
-                 fill="none"
-                 stroke="currentColor"
-                 stroke-width="3"
-                 transform="rotate(-20 90 72)" />
+  return `
+    <section class="pg" id="treinador-ritmo">
+      <h2>🥁 Treinador de Ritmo</h2>
+      <p>Aprenda a reconhecer figuras musicais!</p>
 
-        <line x1="102" y1="69"
-              x2="102" y2="16"
-              stroke="currentColor"
-              stroke-width="3" />
-      </svg>
+      <div class="card" style="margin:20px 0">
+        <h3>🎼 Nível 1 — Valores musicais</h3>
 
-      <p><b>🎵 Quantos tempos vale essa mínima?</b></p>
+        <p>Figura ${indiceRitmo + 1} de ${figurasRitmo.length}</p>
+        <p>Considere a semínima valendo 1 tempo.</p>
 
-      <div class="opcoes-ritmo">
-        <button type="button" class="op" data-ritmo-resposta="1">
-          1 tempo
-        </button>
+        <svg viewBox="0 0 200 120"
+             style="width:100%;max-width:220px;display:block;margin:20px auto"
+             role="img"
+             aria-label="Figura musical ${figura.nome}">
 
-        <button type="button" class="op" data-ritmo-resposta="2">
-          2 tempos
-        </button>
+          <ellipse cx="90" cy="80"
+                   rx="${figura.nome === "Semibreve" ? 17 : 13}"
+                   ry="9"
+                   fill="${preenchimento}"
+                   stroke="currentColor"
+                   stroke-width="3"
+                   transform="rotate(-20 90 80)" />
 
-        <button type="button" class="op" data-ritmo-resposta="4">
-          4 tempos
+          ${figura.nome !== "Semibreve" ? `
+            <line x1="102" y1="78"
+                  x2="102" y2="20"
+                  stroke="currentColor"
+                  stroke-width="3" />
+          ` : ""}
+
+          ${figura.nome === "Colcheia" ? `
+            <path d="M102 20 Q140 28 122 62"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3" />
+          ` : ""}
+        </svg>
+
+        <p><b>🎵 Quantos tempos vale esta figura?</b></p>
+
+        <div class="opcoes-ritmo">
+          <button class="op" type="button" data-ritmo-resposta="0.5">½ tempo</button>
+          <button class="op" type="button" data-ritmo-resposta="1">1 tempo</button>
+          <button class="op" type="button" data-ritmo-resposta="2">2 tempos</button>
+          <button class="op" type="button" data-ritmo-resposta="4">4 tempos</button>
+        </div>
+
+        <p id="resultado-ritmo" aria-live="polite"></p>
+
+        <button class="btn" type="button"
+                data-ritmo-proxima disabled>
+          ${indiceRitmo === figurasRitmo.length - 1
+            ? "🔄 Recomeçar treino"
+            : "🎵 Próxima figura"}
         </button>
       </div>
 
-      <p id="resultado-ritmo" aria-live="polite"></p>
-    </div>
-
-    <a class="btn" href="#/curso">Voltar ao curso</a>
-  </section>
-`;
+      <a class="btn" href="#/curso">Voltar ao curso</a>
+    </section>
+  `;
+};
 
 document.addEventListener("click", e => {
+  const proximo = e.target.closest("[data-ritmo-proxima]");
+
+  if (proximo) {
+    indiceRitmo = (indiceRitmo + 1) % figurasRitmo.length;
+
+    const pagina = document.querySelector("#treinador-ritmo");
+
+    if (pagina) {
+      pagina.outerHTML = treinadorRitmo();
+    }
+
+    return;
+  }
+
   const botao = e.target.closest("[data-ritmo-resposta]");
   if (!botao) return;
 
-  const resultado = document.querySelector("#resultado-ritmo");
-  if (!resultado) return;
+  const pagina = document.querySelector("#treinador-ritmo");
+  if (!pagina) return;
 
-  if (botao.dataset.ritmoResposta === "2") {
+  const resultado = pagina.querySelector("#resultado-ritmo");
+  const resposta = Number(botao.dataset.ritmoResposta);
+  const correta = figurasRitmo[indiceRitmo].valor;
+
+  if (resposta === correta) {
     resultado.textContent = "✅ Parabéns! Você acertou!";
     resultado.style.color = "#75d88a";
 
-    document.querySelectorAll(".opcoes-ritmo button")
-      .forEach(b => b.disabled = true);
+    pagina.querySelector("[data-ritmo-proxima]").disabled = false;
 
+    pagina.querySelectorAll("[data-ritmo-resposta]")
+      .forEach(b => b.disabled = true);
   } else {
     resultado.textContent = "❌ Tente novamente!";
     resultado.style.color = "#ff8585";
