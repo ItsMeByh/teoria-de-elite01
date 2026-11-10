@@ -251,6 +251,36 @@ const menuCurso = () => `
     </div>
   </section>
 `;
+const formacaoGeral = () => `
+  <section class="pg">
+    <h2>📚 Formação Musical Geral</h2>
+    <p>Escolha seu nível de formação musical.</p>
+
+    <div class="grid">
+      <a class="card" href="#/jornada">
+        <h3>🎵 Nível I — Básico</h3>
+        <p>Aprenda os fundamentos da música.</p>
+        <span>Entrar no Nível I →</span>
+      </a>
+
+      <div class="card">
+        <h3>🎼 Nível II — Intermediário</h3>
+        <p>Aprofunde seus conhecimentos musicais.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+
+      <div class="card">
+        <h3>🏆 Nível III — Avançado</h3>
+        <p>Domine conteúdos musicais avançados.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+    </div>
+
+    <a class="btn" href="#/curso">
+      ← Voltar ao curso
+    </a>
+  </section>
+`;
 const jornada = () => `<section class="pg"><h2>Jornada musical</h2>
 ${!S.admin ? `
 <div class="card" style="margin:20px 0">
