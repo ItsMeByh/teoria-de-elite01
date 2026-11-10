@@ -218,7 +218,7 @@ const menuCurso = () => `
     <p>Escolha o que deseja estudar hoje!</p>
 
     <div class="grid">
-      <a class="card" href="#/jornada">
+   <a class="card" href="#/formacaoGeral">
         <h3>📚 Formação Musical Geral</h3>
         <p>Nível I — Básico</p>
         <p>Nível II — Intermediário</p>
