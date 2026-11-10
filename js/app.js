@@ -219,19 +219,36 @@ const menuCurso = () => `
 
     <div class="grid">
       <a class="card" href="#/jornada">
-        <h3>📚 Aulas</h3>
-        <p>Continue seus estudos de teoria musical.</p>
+        <h3>📚 Formação Musical Geral</h3>
+        <p>Nível I — Básico</p>
+        <p>Nível II — Intermediário</p>
+        <p>Nível III — Avançado</p>
         <span>Entrar nas aulas →</span>
-   <a class="card" href="#/desafioOuvido">
-  <h3>🎧 Desafio de Ouvido Musical</h3>
-  <p>Escute as notas e teste seu ouvido musical.</p>
-  <span>Começar desafio →</span>
-</a>
-    <a class="card" href="#/treinadorRitmo">
-  <h3>🥁 Treinador de Ritmo</h3>
-  <p>Aprenda a contar tempos e reconhecer figuras musicais.</p>
-  <span>Começar treinamento →</span>
-</a>
+      </a>
+
+      <div class="card">
+        <h3>🎻 Formação por Instrumento</h3>
+        <p>Violino, viola, flauta e outros instrumentos.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+    </div>
+
+    <h3>🎮 Centro de Treinamento</h3>
+    <p>Pratique suas habilidades musicais!</p>
+
+    <div class="grid">
+      <a class="card" href="#/desafioOuvido">
+        <h3>🎧 Desafio de Ouvido Musical</h3>
+        <p>Escute as notas e teste seu ouvido musical.</p>
+        <span>Começar desafio →</span>
+      </a>
+
+      <a class="card" href="#/treinadorRitmo">
+        <h3>🥁 Treinador de Ritmo</h3>
+        <p>Aprenda a contar tempos e reconhecer figuras musicais.</p>
+        <span>Começar treinamento →</span>
+      </a>
+    </div>
   </section>
 `;
 const jornada = () => `<section class="pg"><h2>Jornada musical</h2>
