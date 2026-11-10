@@ -602,7 +602,7 @@ const desafioOuvido = () => `
 `;
 // ---------- Rotas ----------
 const ROTAS = { "": home, entrada, painel, jornada, formacaoGeral, historia, materiais, avaliacoes, progresso, sobre, ia, aula, desafioOuvido, curso: menuCurso, treinadorRitmo };
-const GRUPO = { "": "a", entrada: "a", painel: "a", jornada: "b", aula: "b", historia: "c", materiais: "c", avaliacoes: "b", progresso: "b", sobre: "a", ia: "c" };
+const GRUPO = { "": "a", entrada: "a", painel: "a", jornada: "b", formacaoGeral: "b", aula: "b", historia: "c", materiais: "c", avaliacoes: "b", progresso: "b", sobre: "a", ia: "c" };
 const PUBLICAS = ["", "entrada", "sobre"];
 function render() {
   const [r, arg] = location.hash.slice(2).split("/"), rota = ROTAS[r] ? r : "";
