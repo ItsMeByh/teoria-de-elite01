@@ -287,6 +287,47 @@ const formacaoInstrumental = () => `
     </a>
   </section>
 `;
+const metodoViolino = () => `
+  <section class="pg">
+    <h2>🎻 Método Musical Teoria de Elite — Violino</h2>
+
+    <p>
+      Bem-vindo à formação de violino!
+      Aqui você desenvolverá sua técnica, postura,
+      afinação e interpretação musical.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>📚 Método de Violino</h3>
+        <p>Material didático organizado para seus estudos.</p>
+        <span>Em preparação</span>
+      </div>
+
+      <div class="card">
+        <h3>🎻 Aulas Práticas</h3>
+        <p>Postura, arco, afinação e técnica instrumental.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+
+      <div class="card">
+        <h3>🎥 Videoaulas</h3>
+        <p>Explicações e demonstrações práticas.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+
+      <div class="card">
+        <h3>📝 Exercícios e Avaliações</h3>
+        <p>Acompanhe sua evolução no instrumento.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+    </div>
+
+    <a class="btn" href="#/formacaoInstrumental">
+      ← Voltar aos instrumentos
+    </a>
+  </section>
+`;
 const formacaoGeral = () => `
   <section class="pg">
     <h2>📚 Formação Musical Geral</h2>
