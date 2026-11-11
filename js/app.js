@@ -263,7 +263,7 @@ const formacaoInstrumental = () => `
         <span>Primeira formação em preparação</span>
       </div>
 
-      <div class="card">
+     <a class="card" href="#/metodoViolino">
         <h3>🎻 Viola</h3>
         <p>Formação específica para viola.</p>
         <span>Em desenvolvimento</span>
