@@ -251,6 +251,42 @@ const menuCurso = () => `
     </div>
   </section>
 `;
+const formacaoInstrumental = () => `
+  <section class="pg">
+    <h2>🎻 Formação por Instrumento</h2>
+    <p>Escolha o instrumento que deseja estudar!</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>🎻 Violino</h3>
+        <p>Método Musical Teoria de Elite — Violino.</p>
+        <span>Primeira formação em preparação</span>
+      </div>
+
+      <div class="card">
+        <h3>🎻 Viola</h3>
+        <p>Formação específica para viola.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+
+      <div class="card">
+        <h3>🎻 Violoncelo</h3>
+        <p>Formação específica para violoncelo.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+
+      <div class="card">
+        <h3>🪈 Flauta</h3>
+        <p>Formação específica para flauta.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+    </div>
+
+    <a class="btn" href="#/curso">
+      ← Voltar ao curso
+    </a>
+  </section>
+`;
 const formacaoGeral = () => `
   <section class="pg">
     <h2>📚 Formação Musical Geral</h2>
