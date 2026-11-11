@@ -226,11 +226,11 @@ const menuCurso = () => `
         <span>Entrar nas aulas →</span>
       </a>
 
-      <div class="card">
-        <h3>🎻 Formação por Instrumento</h3>
-        <p>Violino, viola, flauta e outros instrumentos.</p>
-        <span>Em desenvolvimento</span>
-      </div>
+     <a class="card" href="#/formacaoInstrumental">
+  <h3>🎻 Formação por Instrumento</h3>
+  <p>Violino, viola, flauta e outros instrumentos.</p>
+  <span>Explorar instrumentos →</span>
+</a>
     </div>
 
     <h3>🎮 Centro de Treinamento</h3>
