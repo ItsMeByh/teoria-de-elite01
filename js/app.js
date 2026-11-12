@@ -252,18 +252,20 @@ const menuCurso = () => `
   </section>
 `;
 const formacaoInstrumental = () => `
+ const formacaoInstrumental = () => `
   <section class="pg">
     <h2>🎻 Formação por Instrumento</h2>
     <p>Escolha o instrumento que deseja estudar!</p>
 
     <div class="grid">
-      <div class="card">
+
+      <a class="card" href="#/metodoViolino">
         <h3>🎻 Violino</h3>
         <p>Método Musical Teoria de Elite — Violino.</p>
-        <span>Primeira formação em preparação</span>
-      </div>
+        <span>Explorar método →</span>
+      </a>
 
-     <a class="card" href="#/metodoViolino">
+      <div class="card">
         <h3>🎻 Viola</h3>
         <p>Formação específica para viola.</p>
         <span>Em desenvolvimento</span>
@@ -280,6 +282,7 @@ const formacaoInstrumental = () => `
         <p>Formação específica para flauta.</p>
         <span>Em desenvolvimento</span>
       </div>
+
     </div>
 
     <a class="btn" href="#/curso">
