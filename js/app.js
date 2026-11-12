@@ -251,7 +251,6 @@ const menuCurso = () => `
     </div>
   </section>
 `;
-const formacaoInstrumental = () => `
  const formacaoInstrumental = () => `
   <section class="pg">
     <h2>🎻 Formação por Instrumento</h2>
