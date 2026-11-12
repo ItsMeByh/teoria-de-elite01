@@ -680,7 +680,7 @@ const desafioOuvido = () => `
   </section>
 `;
 // ---------- Rotas ----------
-const ROTAS = { "": home, entrada, painel, jornada, formacaoGeral, formacaoInstrumental, historia, materiais, avaliacoes, progresso, sobre, ia, aula, desafioOuvido, curso: menuCurso, treinadorRitmo };
+const ROTAS = { "": home, entrada, painel, jornada, formacaoGeral, formacaoInstrumental, metodoVioino, historia, materiais, avaliacoes, progresso, sobre, ia, aula, desafioOuvido, curso: menuCurso, treinadorRitmo };
 const GRUPO = { "": "a", entrada: "a", painel: "a", jornada: "b", formacaoGeral: "b", formacaoInstrumental: "b", metodoViolino: "b", aula: "b", historia: "c", materiais: "c", avaliacoes: "b", progresso: "b", sobre: "a", ia: "c" };
 const PUBLICAS = ["", "entrada", "sobre"];
 function render() {
