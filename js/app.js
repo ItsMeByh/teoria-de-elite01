@@ -360,6 +360,41 @@ const formacaoGeral = () => `
     </a>
   </section>
 `;
+const materialViolino = () => `
+  <section class="pg">
+    <h2>📚 Método de Violino — Teoria de Elite</h2>
+
+    <p>
+      Bem-vindo ao seu material de estudos!
+      Aqui você encontrará os conteúdos e exercícios
+      do Método Musical Teoria de Elite — Violino.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>📖 Capítulos do Método</h3>
+        <p>Conteúdos organizados para seu aprendizado.</p>
+        <span>Em preparação</span>
+      </div>
+
+      <div class="card">
+        <h3>📄 Materiais Complementares</h3>
+        <p>Partituras e atividades para estudar.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+
+      <div class="card">
+        <h3>🎯 Exercícios do Método</h3>
+        <p>Pratique os conteúdos de cada capítulo.</p>
+        <span>Em desenvolvimento</span>
+      </div>
+    </div>
+
+    <a class="btn" href="#/metodoViolino">
+      ← Voltar à formação de violino
+    </a>
+  </section>
+`;
 const jornada = () => `<section class="pg"><h2>Jornada musical</h2>
 ${!S.admin ? `
 <div class="card" style="margin:20px 0">
