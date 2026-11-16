@@ -298,7 +298,7 @@ const metodoViolino = () => `
       Aqui você desenvolverá sua técnica, postura,
       afinação e interpretação musical.
     </p>
-
+<div class="grid">
     <a class="card" href="#/materialViolino">
   <h3>📚 Método de Violino</h3>
   <p>Material didático organizado para seus estudos.</p>
