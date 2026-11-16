@@ -299,12 +299,11 @@ const metodoViolino = () => `
       afinação e interpretação musical.
     </p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>📚 Método de Violino</h3>
-        <p>Material didático organizado para seus estudos.</p>
-        <span>Em preparação</span>
-      </div>
+    <a class="card" href="#/materialViolino">
+  <h3>📚 Método de Violino</h3>
+  <p>Material didático organizado para seus estudos.</p>
+  <span>Explorar material →</span>
+</a>
 
       <div class="card">
         <h3>🎻 Aulas Práticas</h3>
