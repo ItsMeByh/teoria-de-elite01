@@ -611,11 +611,159 @@ const progresso = () => `<section class="pg"><h2>Progresso</h2>${barra(pct())}<p
 <h3>Conquistas</h3><div class="grid">${conqCards()}</div><h3>Simulados realizados: ${S.simulados.length}</h3>
 <p style="margin-top:24px"><a class="btn sec" href="#/entrada">EDITAR PERFIL</a></p></section>`;
 
-const sobre = () => `<section class="pg"><h2>Sobre o Teoria de Elite</h2>
-<p>Teoria de Elite é uma plataforma gratuita e independente para aprender música de forma organizada, acessível e interessante.</p>
-<p>Ela foi criada para que o estudo tenha um caminho claro: você sabe onde está, o que aprendeu e qual é o próximo passo.</p>
-<p>Criador e fundador: <b>Gabriel Gracioli Cacho</b>.</p><p style="margin-top:22px"><a class="btn" href="#/${S ? "jornada" : "entrada"}">${S ? "IR PARA A JORNADA" : "COMEÇAR"}</a></p></section>`;
+const sobre = () => `
+  <section class="pg">
 
+    <h2>🎓 Sobre o Teoria de Elite</h2>
+    <p>
+      O conhecimento musical ao alcance de todos.
+    </p>
+
+    <div class="card">
+      <h3>📖 Nossa História</h3>
+      <p>
+        O Teoria de Elite nasceu do desejo de tornar
+        o aprendizado musical mais acessível,
+        organizado e interessante.
+      </p>
+      <p>
+        Nosso projeto começou com a criação de aulas
+        digitais e atividades interativas e está
+        crescendo para se tornar uma plataforma
+        completa e independente de educação musical.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>🎯 Nossa Missão</h3>
+        <p>
+          Oferecer ensino musical de qualidade,
+          com explicações simples, exercícios
+          e uma metodologia progressiva.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🌎 Nossa Visão</h3>
+        <p>
+          Tornar o Teoria de Elite uma referência
+          em educação musical acessível,
+          alcançando alunos de todo o Brasil.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <h3>📚 Nossa Metodologia</h3>
+      <p>
+        Nossa formação musical geral está organizada
+        em três níveis:
+      </p>
+      <p>🟢 Nível I — Básico</p>
+      <p>🔵 Nível II — Intermediário</p>
+      <p>🟣 Nível III — Avançado</p>
+      <p>
+        Cada nível terá novos conhecimentos,
+        exercícios, avaliações e atividades práticas.
+      </p>
+      <p>
+        Nosso objetivo é oferecer tanto uma formação
+        acompanhada por professores quanto a
+        possibilidade de estudar no próprio ritmo.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎻 Formação por Instrumento</h3>
+      <p>
+        Além da teoria musical geral, estamos
+        preparando métodos específicos para
+        diferentes instrumentos.
+      </p>
+      <p>
+        O violino é nosso primeiro instrumento
+        em desenvolvimento, com espaço para
+        aulas práticas, materiais e avaliações.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📘 Nossos Métodos Musicais</h3>
+      <p>
+        Já realizamos a primeira impressão do
+        Método de Violino Teoria de Elite.
+      </p>
+      <p>
+        Nosso plano é ampliar a produção de
+        métodos físicos e futuramente oferecer
+        sua distribuição para todo o Brasil.
+      </p>
+      <p>
+        Também queremos conectar os livros
+        aos conteúdos digitais da plataforma.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📝 Exercícios e Avaliações</h3>
+      <p>
+        O Teoria de Elite já possui atividades
+        e treinadores interativos.
+      </p>
+      <p>
+        Planejamos ampliar o sistema com provas
+        por nível, avaliações de aprendizagem
+        e certificados próprios de conclusão.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎥 O Futuro do Teoria de Elite</h3>
+      <p>
+        Estamos planejando a produção de
+        videoaulas com explicações e
+        demonstrações musicais.
+      </p>
+      <p>
+        As gravações começarão após a
+        preparação do nosso estúdio.
+      </p>
+      <p>
+        Outros projetos incluem novos
+        instrumentos e possíveis recursos
+        de inteligência artificial.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>👤 Fundador</h3>
+      <p>
+        O Teoria de Elite foi criado por
+        <strong>Gabriel Gracioli Cacho</strong>.
+      </p>
+      <p>
+        O projeto é desenvolvido com dedicação
+        ao ensino musical e ao crescimento
+        de uma metodologia própria.
+      </p>
+    </div>
+
+    <p>
+      O Teoria de Elite está em constante
+      desenvolvimento. Alguns recursos já estão
+      disponíveis, enquanto outros fazem parte
+      dos nossos planos para o futuro.
+    </p>
+
+    <a class="btn" href="#/curso">
+      🎓 Conhecer nossos cursos
+    </a>
+
+  </section>
+`;
 // IA auxiliar: para conectar uma IA real, defina window.TE_IA = async pergunta => resposta
 async function responderIA(q) {
   if (window.TE_IA) return window.TE_IA(q);
