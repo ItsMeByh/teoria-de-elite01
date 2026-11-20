@@ -581,6 +581,19 @@ const historia = () => `<section class="pg"><h2>História da Música</h2><p clas
 <div class="tl">${PERIODOS.map(p => `<details data-p="${p.id}"><summary><b>${p.nome}</b><span class="mute">${p.anos}</span></summary><div class="det"><p>${p.resumo}</p><ul>${p.marcos.map(m => `<li>${m}</li>`).join("")}</ul><p><b>Compositores:</b> ${p.comp}</p><p><b>Curiosidade:</b> ${p.cur}</p></div></details>`).join("")}</div></section>`;
 
 const materiais = () => `<section class="pg"><h2>Materiais</h2><label>Buscar<input id="busca" type="search" placeholder="Ex.: compasso"></label>
+<h3 style="margin-top:24px">🎼 Biblioteca de Partituras</h3>
+
+<p class="mute">
+  Explore nossa coleção de obras clássicas para violino.
+</p>
+
+<div class="grid">
+  <div class="card">
+    <h3>🎻 Cânone em Ré maior</h3>
+    <p>Compositor: Johann Pachelbel</p>
+    <span>PDF em preparação</span>
+  </div>
+</div>
 <h3 style="margin-top:24px">Glossário</h3><div class="grid" id="gl">${GLOSS.map(g => `<div class="card" data-t="${esc(g[0] + " " + g[1]).toLowerCase()}"><h3>${g[0]}</h3><span class="mute">${g[1]}</span></div>`).join("")}</div>
 <h3>Resumos das aulas</h3><div class="grid" id="rs">${LESSONS.filter(l => l.resumo).map(l => `<a class="card" href="#/aula/${l.id}" data-t="${esc(l.titulo + " " + l.resumo).toLowerCase()}"><h3>${l.titulo}</h3><span class="mute">${l.resumo}</span></a>`).join("")}</div></section>`;
 
