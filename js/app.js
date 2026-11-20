@@ -601,7 +601,7 @@ const materiais = () => `<section class="pg"><h2>Materiais</h2><label>Buscar<inp
   </a>
 </details>
 <details class="card">
-  <summary>📁 Johann Pachelbel — 1 obra</summary>
+  <summary>📁 Antonio Vivaldi — 3 obra</summary>
 
   <p>🎻 Cânone em Ré maior</p>
 
