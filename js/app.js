@@ -603,7 +603,7 @@ const materiais = () => `<section class="pg"><h2>Materiais</h2><label>Buscar<inp
 <details class="card">
   <summary>📁 Antonio Vivaldi — 3 obra</summary>
 
-  <p>🎻 Cânone em Ré maior</p>
+<p>🌸 A Primavera — RV 269</p>
 
   <a href="01_Canone_em_Re_maior_Johann_Pachelbel.pdf"
      target="_blank"
