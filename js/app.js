@@ -600,6 +600,17 @@ const materiais = () => `<section class="pg"><h2>Materiais</h2><label>Buscar<inp
     📄 Visualizar partitura →
   </a>
 </details>
+<details class="card">
+  <summary>📁 Johann Pachelbel — 1 obra</summary>
+
+  <p>🎻 Cânone em Ré maior</p>
+
+  <a href="01_Canone_em_Re_maior_Johann_Pachelbel.pdf"
+     target="_blank"
+     rel="noopener noreferrer">
+    📄 Visualizar partitura →
+  </a>
+</details>
 </div>
 <h3 style="margin-top:24px">Glossário</h3><div class="grid" id="gl">${GLOSS.map(g => `<div class="card" data-t="${esc(g[0] + " " + g[1]).toLowerCase()}"><h3>${g[0]}</h3><span class="mute">${g[1]}</span></div>`).join("")}</div>
 <h3>Resumos das aulas</h3><div class="grid" id="rs">${LESSONS.filter(l => l.resumo).map(l => `<a class="card" href="#/aula/${l.id}" data-t="${esc(l.titulo + " " + l.resumo).toLowerCase()}"><h3>${l.titulo}</h3><span class="mute">${l.resumo}</span></a>`).join("")}</div></section>`;
