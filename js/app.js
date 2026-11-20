@@ -591,7 +591,7 @@ const materiais = () => `<section class="pg"><h2>Materiais</h2><label>Buscar<inp
   <div class="card">
     <h3>🎻 Cânone em Ré maior</h3>
     <p>Compositor: Johann Pachelbel</p>
-    <span>PDF em preparação</span>
+  <a href="01_Canone_em_Re_maior_Johann_Pachelbel.pdf" target="_blank" rel="noopener noreferrer">📄 Visualizar partitura →</a>
   </div>
 </div>
 <h3 style="margin-top:24px">Glossário</h3><div class="grid" id="gl">${GLOSS.map(g => `<div class="card" data-t="${esc(g[0] + " " + g[1]).toLowerCase()}"><h3>${g[0]}</h3><span class="mute">${g[1]}</span></div>`).join("")}</div>
