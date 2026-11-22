@@ -836,8 +836,26 @@ const LESSONS = [
 }
 ];
 
-const PERIODOS = [
-  { id: "pre", nome: "Pré-História", anos: "até ~3000 a.C.", resumo: "Voz, percussão corporal e flautas de osso.", marcos: ["Flautas de osso com mais de 40 mil anos", "Música ligada a rituais"], comp: "Sem autoria conhecida", cur: "Instrumentos mais antigos já encontrados são flautas." },
+const PERIODOS =  
+  {
+  id: "pre",
+  nome: "Pré-História",
+  anos: "até aproximadamente 3000 a.C.",
+
+  resumo: "Muito antes da escrita musical, os seres humanos já exploravam os sons da voz, do corpo e da natureza. Instrumentos antigos mostram que a música faz parte da história humana há milhares de anos.",
+
+  marcos: [
+    "A voz e as palmas podem ter sido utilizadas para criar sons e ritmos.",
+    "Pedras, madeiras e outros materiais naturais podem ter sido usados para produzir sons.",
+    "Arqueólogos encontraram flautas de osso e marfim com dezenas de milhares de anos.",
+    "A música pode ter acompanhado danças, encontros e cerimônias.",
+    "Não sabemos exatamente como as primeiras músicas soavam, pois não existiam gravações."
+  ],
+
+  comp: "Autores desconhecidos. Não existem nomes registrados dos primeiros músicos.",
+
+  cur: "Você sabia? Algumas flautas encontradas por arqueólogos têm cerca de 40 mil anos! Isso mostra que instrumentos musicais existiam muito antes das partituras."
+},
   { id: "ant", nome: "Antiguidade", anos: "~3000 a.C. – 476", resumo: "Egito, Grécia e Roma estudam o som e criam instrumentos como a lira.", marcos: ["Pitágoras relaciona notas e proporções", "Música no teatro grego"], comp: "Pitágoras (teórico)", cur: "A palavra 'música' vem das Musas gregas." },
   { id: "med", nome: "Idade Média", anos: "476 – 1400", resumo: "Canto gregoriano e primeiros sistemas de escrita musical.", marcos: ["Guido d'Arezzo e o nome das notas", "Polifonia nas catedrais"], comp: "Hildegard von Bingen, Guido d'Arezzo", cur: "Os nomes Dó-Ré-Mi vêm de um hino latino." },
   { id: "ren", nome: "Renascimento", anos: "1400 – 1600", resumo: "Vozes entrelaçadas com clareza e a difusão da imprensa musical.", marcos: ["Impressão de partituras", "Madrigais"], comp: "Palestrina, Josquin des Prez", cur: "A imprensa musical espalhou partituras pela Europa." },
