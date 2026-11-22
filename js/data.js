@@ -836,7 +836,7 @@ const LESSONS = [
 }
 ];
 
-const PERIODOS =  [
+const PERIODOS = [
   {
   id: "pre",
   nome: "Pré-História",
