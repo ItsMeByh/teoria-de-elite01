@@ -150,7 +150,26 @@ const salvarInstrumento = async (uid, instrumento, modoEstudo) => {
     .select("instrumento, modo_estudo")
     .single());
 };
- return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear, salvarInstrumento,
+async function salvarAnotacao(titulo, conteudo) {
+  if (!on) {
+    throw new Error("Supabase não está configurado.");
+  }
+
+  const u = await user();
+
+  if (!u) {
+    throw new Error("Entre na sua conta para salvar anotações.");
+  }
+
+  const resultado = await sb.from("anotacoes").insert({
+    user_id: u.id,
+    titulo: titulo,
+    conteudo: conteudo
+  });
+
+  return ok(resultado);
+}
+  return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear, salvarInstrumento,
           entrar: async (e, s) => ok(await sb.auth.signInWithPassword({ email: e, password: s })),
     cadastrar: async f => ok(await sb.auth.signUp({ email: f.email, password: f.senha, options: { data: { nome: f.nome, idade: f.idade, nivel: f.nivel } } })),
     sair: () => sb.auth.signOut(),
