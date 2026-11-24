@@ -1177,6 +1177,39 @@ if (u) {
 }
 }
 document.addEventListener("click", async e => {
+const botaoAnotacao = e.target.closest('[data-act="salvar-anotacao"]');
+
+  if (botaoAnotacao) {
+    e.preventDefault();
+
+    const titulo = document.querySelector("#tituloAnotacao")?.value.trim();
+    const conteudo = document.querySelector("#textoAnotacao")?.value.trim();
+
+    if (!titulo || !conteudo) {
+      toast("Preencha o título e a anotação.");
+      return;
+    }
+
+    botaoAnotacao.disabled = true;
+
+    try {
+      await DB.salvarAnotacao(titulo, conteudo);
+
+      toast("Anotação salva com sucesso!");
+
+      document.querySelector("#tituloAnotacao").value = "";
+      document.querySelector("#textoAnotacao").value = "";
+
+    } catch (erro) {
+      console.error("Erro ao salvar anotação:", erro);
+      toast("Erro ao salvar: " + erro.message);
+
+    } finally {
+      botaoAnotacao.disabled = false;
+    }
+
+    return;
+  }
   const botaoBloqueio = e.target.closest("#bloquear-aluno");
 if (botaoBloqueio) {
   e.preventDefault();
