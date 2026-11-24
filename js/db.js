@@ -169,7 +169,7 @@ async function salvarAnotacao(titulo, conteudo) {
 
   return ok(resultado);
 }
-  return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear, salvarInstrumento,
+  return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear, salvarInstrumento, salvarInstrumento, salvarAnotacao,
           entrar: async (e, s) => ok(await sb.auth.signInWithPassword({ email: e, password: s })),
     cadastrar: async f => ok(await sb.auth.signUp({ email: f.email, password: f.senha, options: { data: { nome: f.nome, idade: f.idade, nivel: f.nivel } } })),
     sair: () => sb.auth.signOut(),
