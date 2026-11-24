@@ -576,7 +576,20 @@ function concluir() {
   toast("+50 XP · +1 estrela");
   const p = proxima(); location.hash = p && p.corpo ? "#/aula/" + p.id : "#/jornada";
 }
+const caderno = () => `
+  <section class="pg">
+    <h2>📓 Meu Caderno Musical</h2>
+    <p class="mute">
+      Seu espaço pessoal para registrar o que aprendeu
+      durante as aulas do Teoria de Elite.
+    </p>
 
+    <div class="card">
+      <h3>Minhas Anotações</h3>
+      <p>Em breve, você poderá criar, editar e organizar suas anotações aqui.</p>
+    </div>
+  </section>
+`;
 const historia = () => `<section class="pg"><h2>História da Música</h2><p class="mute">Explore cada período. ${S ? S.hist.length : 0}/${PERIODOS.length} visitados.</p>
 <div class="tl">${PERIODOS.map(p => `<details data-p="${p.id}"><summary><b>${p.nome}</b><span class="mute">${p.anos}</span></summary><div class="det"><p>${p.resumo}</p><ul>${p.marcos.map(m => `<li>${m}</li>`).join("")}</ul><p><b>Compositores:</b> ${p.comp}</p><p><b>Curiosidade:</b> ${p.cur}</p></div></details>`).join("")}</div></section>`;
 
