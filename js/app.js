@@ -602,10 +602,9 @@ const caderno = () => `
         placeholder="Escreva aqui suas anotações..."
         style="width:100%; margin-top:8px"
       ></textarea>
-
-      <button class="btn" type="button" disabled>
-        💾 Salvar Anotação (em breve)
-      </button>
+<button class="btn" type="button" data-act="salvar-anotacao">
+  💾 Salvar Anotação
+</button>
     </div>
 
     <div class="card" style="margin-top:20px">
