@@ -579,14 +579,40 @@ function concluir() {
 const caderno = () => `
   <section class="pg">
     <h2>📓 Meu Caderno Musical</h2>
+
     <p class="mute">
       Seu espaço pessoal para registrar o que aprendeu
       durante as aulas do Teoria de Elite.
     </p>
 
     <div class="card">
-      <h3>Minhas Anotações</h3>
-      <p>Em breve, você poderá criar, editar e organizar suas anotações aqui.</p>
+      <h3>✏️ Nova Anotação</h3>
+
+      <label for="tituloAnotacao">Título da anotação</label>
+      <input
+        id="tituloAnotacao"
+        type="text"
+        placeholder="Ex.: O que aprendi sobre pentagrama"
+      >
+
+      <label for="textoAnotacao">O que você aprendeu?</label>
+      <textarea
+        id="textoAnotacao"
+        rows="8"
+        placeholder="Escreva aqui suas anotações..."
+        style="width:100%; margin-top:8px"
+      ></textarea>
+
+      <button class="btn" type="button" disabled>
+        💾 Salvar Anotação (em breve)
+      </button>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>📚 Minhas Anotações</h3>
+      <p class="mute">
+        Suas anotações salvas aparecerão aqui.
+      </p>
     </div>
   </section>
 `;
