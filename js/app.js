@@ -594,6 +594,15 @@ const historia = () => `<section class="pg"><h2>História da Música</h2><p clas
 <div class="tl">${PERIODOS.map(p => `<details data-p="${p.id}"><summary><b>${p.nome}</b><span class="mute">${p.anos}</span></summary><div class="det"><p>${p.resumo}</p><ul>${p.marcos.map(m => `<li>${m}</li>`).join("")}</ul><p><b>Compositores:</b> ${p.comp}</p><p><b>Curiosidade:</b> ${p.cur}</p></div></details>`).join("")}</div></section>`;
 
 const materiais = () => `<section class="pg"><h2>Materiais</h2><label>Buscar<input id="busca" type="search" placeholder="Ex.: compasso"></label>
+<div class="card" style="margin-top:20px; margin-bottom:24px">
+  <h3>📓 Meu Caderno Musical</h3>
+  <p class="mute">
+    Registre o que aprendeu durante suas aulas e consulte suas anotações quando quiser.
+  </p>
+  <a class="btn" href="#/caderno">
+    📓 Abrir Meu Caderno
+  </a>
+</div>
 <h3 style="margin-top:24px">🎼 Biblioteca de Partituras</h3>
 
 <p class="mute">
