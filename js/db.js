@@ -168,6 +168,25 @@ async function salvarAnotacao(titulo, conteudo) {
   });
 
   return ok(resultado);
+async function listarAnotacoes() {
+  if (!on) {
+    throw new Error("Supabase não está configurado.");
+  }
+
+  const u = await user();
+
+  if (!u) {
+    throw new Error("Entre na sua conta para ver suas anotações.");
+  }
+
+  const resultado = await sb
+    .from("anotacoes")
+    .select("id, titulo, conteudo, created_at")
+    .eq("user_id", u.id)
+    .order("created_at", { ascending: false });
+
+  return ok(resultado);
+}
 }
   return { on, user, carregar, sync, avaliacao, admLista, admAluno, admBloquear, salvarInstrumento, salvarAnotacao,
           entrar: async (e, s) => ok(await sb.auth.signInWithPassword({ email: e, password: s })),
