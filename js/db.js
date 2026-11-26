@@ -168,7 +168,9 @@ async function salvarAnotacao(titulo, conteudo) {
   });
 
 return ok(resultado);
-async function listarAnotacoes() {
+}
+  
+  async function listarAnotacoes() {
   if (!on) {
     throw new Error("Supabase não está configurado.");
   }
