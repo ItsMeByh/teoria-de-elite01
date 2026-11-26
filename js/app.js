@@ -1226,7 +1226,46 @@ if (u) {
 }
 }
 document.addEventListener("click", async e => {
-const botaoAnotacao = e.target.closest('[data-act="salvar-anotacao"]');
+const botaoEditar = e.target.closest('[data-act="editar-anotacao"]');
+
+if (botaoEditar) {
+  e.preventDefault();
+
+  const card = botaoEditar.closest(".card");
+  const tituloAtual = card.querySelector("h4").textContent;
+  const conteudoAtual = card.querySelector("p").textContent;
+
+  const novoTitulo = prompt("Editar título:", tituloAtual);
+  if (novoTitulo === null) return;
+
+  const novoConteudo = prompt("Editar anotação:", conteudoAtual);
+  if (novoConteudo === null) return;
+
+  if (!novoTitulo.trim() || !novoConteudo.trim()) {
+    toast("Preencha o título e o conteúdo.");
+    return;
+  }
+
+  botaoEditar.disabled = true;
+
+  try {
+    await DB.editarAnotacao(
+      botaoEditar.dataset.id,
+      novoTitulo.trim(),
+      novoConteudo.trim()
+    );
+
+    toast("Anotação atualizada com sucesso!");
+    render();
+  } catch (erro) {
+    console.error("Erro ao editar:", erro);
+    toast("Erro ao editar: " + erro.message);
+    botaoEditar.disabled = false;
+  }
+
+  return;
+}
+  const botaoAnotacao = e.target.closest('[data-act="salvar-anotacao"]');
 
   if (botaoAnotacao) {
     e.preventDefault();
