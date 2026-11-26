@@ -134,6 +134,41 @@ const CURRICULO_NIVEL_1 = [
   { numero: 49, etapa: 5, titulo: "Movimento alternativo em 6" },
   { numero: 50, etapa: 5, titulo: "Revisão e avaliação do Nível I" }
 ];
+const AULAS_NIVEL_1 = [
+  {
+    numero: 1,
+    etapa: 1,
+    titulo: "O que é música?",
+    objetivo: "Compreender o que é música e reconhecer sua presença no cotidiano.",
+    corpo: [
+      "🎵 Música é uma forma de arte que organiza sons e silêncios ao longo do tempo.",
+      "Podemos fazer música cantando, tocando instrumentos ou utilizando diferentes objetos para criar ritmos.",
+      "Imagine alguém cantando uma melodia enquanto outra pessoa acompanha com palmas. Isso também é fazer música!",
+      "💡 CURIOSIDADE: existem músicas feitas somente com a voz, sem nenhum instrumento musical."
+    ],
+    resumo: "Música é uma forma de expressão artística que organiza sons e silêncios no tempo.",
+    quiz: [
+      {
+        q: "O que é música?",
+        o: [
+          "Apenas tocar instrumentos",
+          "Uma forma de arte que organiza sons e silêncios no tempo",
+          "Qualquer barulho"
+        ],
+        c: 1
+      },
+      {
+        q: "Podemos fazer música sem instrumentos?",
+        o: [
+          "Sim, usando nossa voz",
+          "Não, instrumentos são obrigatórios",
+          "Somente usando um piano"
+        ],
+        c: 0
+      }
+    ]
+  }
+];
 const LESSONS = [
   { id: 1, etapa: 1, titulo: "Som, Silêncio e Tempo",
     objetivo: "Entender que a música é feita de som, silêncio e tempo.",
