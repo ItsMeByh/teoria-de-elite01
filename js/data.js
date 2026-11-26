@@ -234,6 +234,42 @@ const AULAS_NIVEL_1 = [
         ],
         c: 1
       }
+      ]
+  },
+  {
+    numero: 4,
+    etapa: 1,
+    titulo: "Frequência sonora e Hertz (Hz)",
+    objetivo: "Entender o que é frequência e como ela se relaciona com sons graves e agudos.",
+    corpo: [
+      "🎵 Os sons podem ser produzidos por vibrações que se repetem mais rapidamente ou mais lentamente.",
+      "A frequência indica quantos ciclos de vibração acontecem a cada segundo.",
+      "🔊 Para medir a frequência, usamos o Hertz, representado por Hz.",
+      "🎻 O Lá de referência usado na afinação de muitos instrumentos tem frequência de 440 Hz. Isso significa 440 ciclos de vibração por segundo.",
+      "Em geral, quanto maior a frequência de um som, mais agudo ele é. Quanto menor, mais grave.",
+      "💡 CURIOSIDADE: o ouvido humano não consegue perceber todas as frequências sonoras!"
+    ],
+    resumo: "Frequência é o número de ciclos por segundo. Sua unidade de medida é o Hertz (Hz).",
+    quiz: [
+      {
+        q: "O que significa Hz?",
+        o: [
+          "Hertz, unidade que mede frequência",
+          "A força de um som",
+          "A duração de uma nota"
+        ],
+        c: 0
+      },
+      {
+        q: "Um som com frequência maior geralmente é:",
+        o: ["Mais grave", "Mais agudo", "Mais forte"],
+        c: 1
+      },
+      {
+        q: "Quantos ciclos por segundo correspondem a 440 Hz?",
+        o: ["44", "440", "4.400"],
+        c: 1
+      }
     ]
   }
 ];
