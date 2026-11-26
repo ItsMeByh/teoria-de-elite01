@@ -73,7 +73,67 @@ const STAGES = [
     desc: "Aulas 41 a 50 — Ligaduras, intervalos, tercinas e compasso em 6."
   }
 ];
+const CURRICULO_NIVEL_1 = [
+  // Etapa 1 — Descobrindo a Música
+  { numero: 1, etapa: 1, titulo: "O que é música?" },
+  { numero: 2, etapa: 1, titulo: "O que é som?" },
+  { numero: 3, etapa: 1, titulo: "Vibrações e ondas sonoras" },
+  { numero: 4, etapa: 1, titulo: "Frequência sonora e Hertz (Hz)" },
+  { numero: 5, etapa: 1, titulo: "Sons graves, médios e agudos" },
+  { numero: 6, etapa: 1, titulo: "As sete notas musicais" },
+  { numero: 7, etapa: 1, titulo: "Ordem ascendente e descendente das notas" },
+  { numero: 8, etapa: 1, titulo: "Melodia, harmonia e ritmo" },
+  { numero: 9, etapa: 1, titulo: "As quatro propriedades do som" },
+  { numero: 10, etapa: 1, titulo: "Som, silêncio e escuta musical" },
 
+  // Etapa 2 — Escrita Musical
+  { numero: 11, etapa: 2, titulo: "Pentagrama" },
+  { numero: 12, etapa: 2, titulo: "Linhas suplementares" },
+  { numero: 13, etapa: 2, titulo: "Claves de Sol, Fá e Dó" },
+  { numero: 14, etapa: 2, titulo: "Identificação e linhas de referência das claves" },
+  { numero: 15, etapa: 2, titulo: "Identificação das notas no pentagrama" },
+  { numero: 16, etapa: 2, titulo: "Leitura das notas nas claves de Sol e Fá" },
+  { numero: 17, etapa: 2, titulo: "Figuras musicais" },
+  { numero: 18, etapa: 2, titulo: "Figuras de silêncio" },
+  { numero: 19, etapa: 2, titulo: "Número de equivalência" },
+  { numero: 20, etapa: 2, titulo: "Partes das figuras musicais" },
+
+  // Etapa 3 — Ritmo e Compassos
+  { numero: 21, etapa: 3, titulo: "O que é compasso?" },
+  { numero: 22, etapa: 3, titulo: "Barras de compasso" },
+  { numero: 23, etapa: 3, titulo: "Fórmula de compasso" },
+  { numero: 24, etapa: 3, titulo: "Fórmula de compasso em 4" },
+  { numero: 25, etapa: 3, titulo: "Ritmo e pulsação" },
+  { numero: 26, etapa: 3, titulo: "Subdivisão da pulsação" },
+  { numero: 27, etapa: 3, titulo: "Exercícios rítmicos" },
+  { numero: 28, etapa: 3, titulo: "Metrônomo" },
+  { numero: 29, etapa: 3, titulo: "Leitura rítmica" },
+  { numero: 30, etapa: 3, titulo: "Leitura métrica" },
+
+  // Etapa 4 — Introdução ao Solfejo
+  { numero: 31, etapa: 4, titulo: "Endecagrama" },
+  { numero: 32, etapa: 4, titulo: "O que é solfejo?" },
+  { numero: 33, etapa: 4, titulo: "Postura e movimentos de condução" },
+  { numero: 34, etapa: 4, titulo: "Movimento de condução em 4" },
+  { numero: 35, etapa: 4, titulo: "Exercícios de solfejo em 4" },
+  { numero: 36, etapa: 4, titulo: "Fórmula de compasso em 3" },
+  { numero: 37, etapa: 4, titulo: "Movimento de condução em 3" },
+  { numero: 38, etapa: 4, titulo: "Exercícios de solfejo em 3" },
+  { numero: 39, etapa: 4, titulo: "Fórmula de compasso em 2" },
+  { numero: 40, etapa: 4, titulo: "Movimento de solfejo em 2" },
+
+  // Etapa 5 — Consolidação Musical
+  { numero: 41, etapa: 5, titulo: "Ligaduras musicais" },
+  { numero: 42, etapa: 5, titulo: "Ponto de aumento" },
+  { numero: 43, etapa: 5, titulo: "Intervalos musicais" },
+  { numero: 44, etapa: 5, titulo: "Tons e semitons" },
+  { numero: 45, etapa: 5, titulo: "Tercinas" },
+  { numero: 46, etapa: 5, titulo: "Fermata" },
+  { numero: 47, etapa: 5, titulo: "Fórmula de compasso em 6" },
+  { numero: 48, etapa: 5, titulo: "Movimento de solfejo em 6" },
+  { numero: 49, etapa: 5, titulo: "Movimento alternativo em 6" },
+  { numero: 50, etapa: 5, titulo: "Revisão e avaliação do Nível I" }
+];
 const LESSONS = [
   { id: 1, etapa: 1, titulo: "Som, Silêncio e Tempo",
     objetivo: "Entender que a música é feita de som, silêncio e tempo.",
