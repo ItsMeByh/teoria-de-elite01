@@ -203,6 +203,41 @@ const AULAS_NIVEL_1 = [
       }
     ]
   }
+},
+  {
+    numero: 3,
+    etapa: 1,
+    titulo: "Vibrações e ondas sonoras",
+    objetivo: "Entender como as vibrações produzem ondas sonoras.",
+    corpo: [
+      "🌊 Quando um objeto vibra, ele pode fazer o ar ao seu redor vibrar também.",
+      "Essas perturbações se espalham pelo ar em forma de ondas sonoras, que podem chegar até nossos ouvidos.",
+      "🎻 Imagine uma corda de violino sendo tocada. Ela vibra, e o instrumento ajuda a transmitir essas vibrações para o ar.",
+      "💡 Uma onda sonora transporta energia. O ar vibra em torno de sua posição, mas não viaja inteiro desde o instrumento até o nosso ouvido.",
+      "🧪 EXPERIÊNCIA: coloque a mão suavemente na garganta enquanto fala. Você consegue sentir a vibração da sua voz?"
+    ],
+    resumo: "As ondas sonoras são perturbações que se propagam por um meio, como o ar, transportando energia.",
+    quiz: [
+      {
+        q: "O que acontece quando uma corda de violino produz som?",
+        o: [
+          "Ela vibra e ajuda a produzir ondas sonoras",
+          "Ela para de se movimentar",
+          "Ela transforma o ar em luz"
+        ],
+        c: 0
+      },
+      {
+        q: "As ondas sonoras transportam principalmente:",
+        o: [
+          "Luz",
+          "Energia",
+          "O instrumento musical inteiro"
+        ],
+        c: 1
+      }
+    ]
+  }
 ];
 const LESSONS = [
   { id: 1, etapa: 1, titulo: "Som, Silêncio e Tempo",
