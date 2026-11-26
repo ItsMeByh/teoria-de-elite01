@@ -954,6 +954,9 @@ function render() {
   $("#nadmin").hidden = !(S && S.admin); $("#nsair").hidden = !(S && S.uid);
   document.body.dataset.g = GRUPO[rota];
   $("#app").innerHTML = ROTAS[rota](arg);
+  if (rota === "caderno") {
+  carregarAnotacoesCaderno();
+}
   $("#nav").classList.remove("open"); $("#mb").setAttribute("aria-expanded", "false");
   document.querySelectorAll("nav a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#/" + (rota === "aula" ? "jornada" : rota)));
   scrollTo({ top: 0 });
