@@ -270,6 +270,46 @@ const AULAS_NIVEL_1 = [
         o: ["44", "440", "4.400"],
         c: 1
       }
+]
+  },
+  {
+    numero: 5,
+    etapa: 1,
+    titulo: "Sons graves, médios e agudos",
+    objetivo: "Aprender a diferenciar sons graves, médios e agudos pela escuta.",
+    corpo: [
+      "🎵 Você já percebeu que alguns sons parecem mais grossos e outros mais finos? Essa diferença está relacionada à altura do som.",
+      "🔊 Sons graves possuem frequências mais baixas. Por exemplo, a voz grave de uma pessoa ou as notas mais baixas de uma tuba.",
+      "🎻 Sons agudos possuem frequências mais altas. Podemos perceber isso nas notas mais altas de um violino ou no canto agudo de alguns pássaros.",
+      "🎼 Sons médios ficam em uma região intermediária entre os graves e os agudos. Essa classificação depende da comparação e não possui limites únicos para todos os instrumentos.",
+      "💡 CURIOSIDADE: o mesmo instrumento pode produzir sons graves e agudos dentro de sua extensão musical.",
+      "🧪 EXPERIÊNCIA: cante uma nota confortável e depois tente cantar outra mais grave e outra mais aguda. Perceba a diferença entre elas."
+    ],
+    resumo: "A altura diferencia sons graves e agudos. Sons graves possuem frequências menores, sons agudos possuem frequências maiores e sons médios ficam em uma região intermediária.",
+    quiz: [
+      {
+        q: "Qual propriedade do som permite distinguir graves e agudos?",
+        o: ["Intensidade", "Altura", "Duração"],
+        c: 1
+      },
+      {
+        q: "Um som grave geralmente possui:",
+        o: [
+          "Frequência mais baixa",
+          "Frequência mais alta",
+          "Volume obrigatoriamente mais baixo"
+        ],
+        c: 0
+      },
+      {
+        q: "Um instrumento musical pode produzir sons graves e agudos?",
+        o: [
+          "Não, cada instrumento produz apenas uma altura",
+          "Sim, dentro de sua extensão musical",
+          "Somente se estiver tocando muito forte"
+        ],
+        c: 1
+      }
     ]
   }
 ];
