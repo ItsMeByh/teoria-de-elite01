@@ -424,6 +424,24 @@ ${!S.admin ? `
 ` : S.admin
   ? `<p class="mute">🛠️ Modo administrador: você poderá testar todos os instrumentos.</p>`
   : `<p class="mute">🎼 Instrumento escolhido: ${esc(S.instrumento)}</p>`}
+<div class="card" style="margin:20px 0">
+  <h3>📚 Novo currículo — Nível I</h3>
+  <p class="mute">Conheça as 50 aulas planejadas para sua formação musical.</p>
+
+  ${STAGES.map(etapa => `
+    <details style="margin:12px 0">
+      <summary><b>${etapa.nome}</b></summary>
+
+      <div style="padding:12px">
+        ${CURRICULO_NIVEL_1
+          .filter(aula => aula.etapa === etapa.id)
+          .map(aula => `
+            <p>${String(aula.numero).padStart(2, "0")} — ${esc(aula.titulo)}</p>
+          `).join("")}
+      </div>
+    </details>
+  `).join("")}
+</div>
 ${barra(pct())}<p class="mute">${pct()}% concluído</p>
 ${STAGES.map(e => {
   const ls = LESSONS.filter(l => l.etapa === e.id), f = ls.filter(l => S.feitas.includes(l.id)).length, at = proxima();
