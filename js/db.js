@@ -200,7 +200,32 @@ async function editarAnotacao(id, titulo, conteudo) {
 
   return dados;
 }
-  
+  async function excluirAnotacao(id) {
+  if (!on) {
+    throw new Error("Supabase não está configurado.");
+  }
+
+  const u = await user();
+
+  if (!u) {
+    throw new Error("Entre na sua conta para excluir anotações.");
+  }
+
+  const resultado = await sb
+    .from("anotacoes")
+    .delete()
+    .eq("id", id)
+    .eq("user_id", u.id)
+    .select("id");
+
+  const dados = ok(resultado);
+
+  if (!dados.length) {
+    throw new Error("Anotação não encontrada ou sem permissão.");
+  }
+
+  return dados;
+}
   async function listarAnotacoes() {
   if (!on) {
     throw new Error("Supabase não está configurado.");
