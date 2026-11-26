@@ -169,6 +169,37 @@ async function salvarAnotacao(titulo, conteudo) {
 
 return ok(resultado);
 }
+
+async function editarAnotacao(id, titulo, conteudo) {
+  if (!on) {
+    throw new Error("Supabase não está configurado.");
+  }
+
+  const u = await user();
+
+  if (!u) {
+    throw new Error("Entre na sua conta para editar anotações.");
+  }
+
+  const resultado = await sb
+    .from("anotacoes")
+    .update({
+      titulo: titulo,
+      conteudo: conteudo,
+      updated_at: new Date().toISOString()
+    })
+    .eq("id", id)
+    .eq("user_id", u.id)
+    .select("id");
+
+  const dados = ok(resultado);
+
+  if (!dados.length) {
+    throw new Error("Anotação não encontrada ou sem permissão.");
+  }
+
+  return dados;
+}
   
   async function listarAnotacoes() {
   if (!on) {
