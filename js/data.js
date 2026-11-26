@@ -168,6 +168,41 @@ const AULAS_NIVEL_1 = [
       }
     ]
   }
+},
+  {
+    numero: 2,
+    etapa: 1,
+    titulo: "O que é som?",
+    objetivo: "Compreender como o som é produzido e percebido.",
+    corpo: [
+      "🔊 O som é produzido quando alguma coisa vibra. Vibrar significa fazer um movimento de vaivém.",
+      "Quando você bate palmas, suas mãos fazem o ar vibrar e produzem um som.",
+      "Essas vibrações se propagam pelo ar em forma de ondas sonoras até chegarem aos nossos ouvidos.",
+      "🎻 Quando tocamos uma corda do violino, ela vibra e ajuda a produzir o som que escutamos.",
+      "💡 CURIOSIDADE: o som também pode se propagar pela água e por materiais sólidos!"
+    ],
+    resumo: "O som é produzido por vibrações que se propagam por um meio, como o ar, até nossos ouvidos.",
+    quiz: [
+      {
+        q: "O que produz o som?",
+        o: [
+          "As vibrações",
+          "Somente a luz",
+          "A cor dos objetos"
+        ],
+        c: 0
+      },
+      {
+        q: "Por onde o som pode se propagar?",
+        o: [
+          "Apenas pelo ar",
+          "Pelo ar, pela água e por materiais sólidos",
+          "Somente pela luz"
+        ],
+        c: 1
+      }
+    ]
+  }
 ];
 const LESSONS = [
   { id: 1, etapa: 1, titulo: "Som, Silêncio e Tempo",
