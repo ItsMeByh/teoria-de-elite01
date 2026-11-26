@@ -988,7 +988,15 @@ botaoEditar.dataset.act = "editar-anotacao";
 botaoEditar.dataset.id = anotacao.id;
 botaoEditar.style.marginTop = "12px";
 
-card.append(titulo, conteudo, botaoEditar);
+ const botaoExcluir = document.createElement("button");
+botaoExcluir.type = "button";
+botaoExcluir.className = "btn";
+botaoExcluir.textContent = "🗑️ Excluir";
+botaoExcluir.dataset.act = "excluir-anotacao";
+botaoExcluir.dataset.id = anotacao.id;
+botaoExcluir.style.marginTop = "12px";
+botaoExcluir.style.marginLeft = "8px";       
+card.append(titulo, conteudo, botaoEditar, botaoExcluir);
         lista.appendChild(card);
       });
     })
