@@ -606,14 +606,11 @@ const caderno = () => `
   💾 Salvar Anotação
 </button>
     </div>
-
-    <div class="card" style="margin-top:20px">
-      <h3>📚 Minhas Anotações</h3>
-      <p class="mute">
-        Suas anotações salvas aparecerão aqui.
-      </p>
-    </div>
-  </section>
+<h3>📚 Minhas Anotações</h3>
+<div id="listaAnotacoes">
+  <p class="mute">Carregando suas anotações...</p>
+</div>
+   </section>
 `;
 const historia = () => `<section class="pg"><h2>História da Música</h2><p class="mute">Explore cada período. ${S ? S.hist.length : 0}/${PERIODOS.length} visitados.</p>
 <div class="tl">${PERIODOS.map(p => `<details data-p="${p.id}"><summary><b>${p.nome}</b><span class="mute">${p.anos}</span></summary><div class="det"><p>${p.resumo}</p><ul>${p.marcos.map(m => `<li>${m}</li>`).join("")}</ul><p><b>Compositores:</b> ${p.comp}</p><p><b>Curiosidade:</b> ${p.cur}</p></div></details>`).join("")}</div></section>`;
