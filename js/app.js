@@ -952,6 +952,47 @@ function render() {
   document.body.dataset.g = GRUPO[rota];
   $("#app").innerHTML = ROTAS[rota](arg);
   if (rota === "caderno") {
+  const lista = document.querySelector("#listaAnotacoes");
+
+  DB.listarAnotacoes()
+    .then(anotacoes => {
+      if (!lista || !lista.isConnected) return;
+
+      lista.replaceChildren();
+
+      if (!anotacoes.length) {
+        const aviso = document.createElement("p");
+        aviso.textContent = "Você ainda não possui anotações salvas.";
+        aviso.className = "mute";
+        lista.appendChild(aviso);
+        return;
+      }
+
+      anotacoes.forEach(anotacao => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.style.marginTop = "12px";
+
+        const titulo = document.createElement("h4");
+        titulo.textContent = anotacao.titulo;
+
+        const conteudo = document.createElement("p");
+        conteudo.textContent = anotacao.conteudo;
+        conteudo.style.whiteSpace = "pre-wrap";
+
+        card.append(titulo, conteudo);
+        lista.appendChild(card);
+      });
+    })
+    .catch(erro => {
+      console.error("Erro ao carregar anotações:", erro);
+
+      if (lista && lista.isConnected) {
+        lista.textContent = "Não foi possível carregar suas anotações.";
+      }
+    });
+}
+  if (rota === "caderno") {
   carregarAnotacoesCaderno();
 }
   $("#nav").classList.remove("open"); $("#mb").setAttribute("aria-expanded", "false");
