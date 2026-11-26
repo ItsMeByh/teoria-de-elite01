@@ -47,13 +47,31 @@ const MODULOS = [
   }
 ];
 const STAGES = [
-  { id: 1, nome: "Fundamentos", desc: "O som, o silêncio e os elementos da música." },
-  { id: 2, nome: "Leitura Musical", desc: "Notas, pentagrama e claves." },
-  { id: 3, nome: "Ritmo", desc: "Figuras, pulso e compasso." },
-  { id: 4, nome: "Melodia", desc: "Em breve." },
-  { id: 5, nome: "Harmonia", desc: "Em breve." },
-  { id: 6, nome: "Percepção", desc: "Em breve." },
-  { id: 7, nome: "História da Música", desc: "Em breve." }
+  {
+    id: 1,
+    nome: "Descobrindo a Música",
+    desc: "Aulas 1 a 10 — Música, som, ondas sonoras e notas musicais."
+  },
+  {
+    id: 2,
+    nome: "Escrita Musical",
+    desc: "Aulas 11 a 20 — Pentagrama, claves, notas e figuras musicais."
+  },
+  {
+    id: 3,
+    nome: "Ritmo e Compassos",
+    desc: "Aulas 21 a 30 — Pulsação, compassos e leitura rítmica."
+  },
+  {
+    id: 4,
+    nome: "Introdução ao Solfejo",
+    desc: "Aulas 31 a 40 — Leitura musical, solfejo e condução."
+  },
+  {
+    id: 5,
+    nome: "Consolidação Musical",
+    desc: "Aulas 41 a 50 — Ligaduras, intervalos, tercinas e compasso em 6."
+  }
 ];
 
 const LESSONS = [
