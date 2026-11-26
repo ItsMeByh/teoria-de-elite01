@@ -1234,7 +1234,34 @@ if (u) {
 }
 }
 document.addEventListener("click", async e => {
-const botaoEditar = e.target.closest('[data-act="editar-anotacao"]');
+const botaoExcluir = e.target.closest('[data-act="excluir-anotacao"]');
+
+if (botaoExcluir) {
+  e.preventDefault();
+
+  const confirmar = confirm(
+    "Tem certeza que deseja excluir esta anotação? Essa ação não pode ser desfeita."
+  );
+
+  if (!confirmar) return;
+
+  botaoExcluir.disabled = true;
+
+  try {
+    await DB.excluirAnotacao(botaoExcluir.dataset.id);
+
+    toast("Anotação excluída com sucesso!");
+    render();
+
+  } catch (erro) {
+    console.error("Erro ao excluir anotação:", erro);
+    toast("Erro ao excluir: " + erro.message);
+    botaoExcluir.disabled = false;
+  }
+
+  return;
+}
+  const botaoEditar = e.target.closest('[data-act="editar-anotacao"]');
 
 if (botaoEditar) {
   e.preventDefault();
