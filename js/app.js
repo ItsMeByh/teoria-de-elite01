@@ -980,7 +980,15 @@ function render() {
         conteudo.textContent = anotacao.conteudo;
         conteudo.style.whiteSpace = "pre-wrap";
 
-        card.append(titulo, conteudo);
+  const botaoEditar = document.createElement("button");
+botaoEditar.type = "button";
+botaoEditar.className = "btn";
+botaoEditar.textContent = "✏️ Editar";
+botaoEditar.dataset.act = "editar-anotacao";
+botaoEditar.dataset.id = anotacao.id;
+botaoEditar.style.marginTop = "12px";
+
+card.append(titulo, conteudo, botaoEditar);
         lista.appendChild(card);
       });
     })
