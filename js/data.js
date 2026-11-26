@@ -201,7 +201,6 @@ const AULAS_NIVEL_1 = [
         c: 1
       }
     ]
-  }
 },
   {
     numero: 3,
