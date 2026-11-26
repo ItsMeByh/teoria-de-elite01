@@ -313,40 +313,54 @@ const AULAS_NIVEL_1 = [
 ]
   },
   {
-    numero: 5,
+    numero: 6,
     etapa: 1,
-    titulo: "Sons graves, médios e agudos",
-    objetivo: "Aprender a diferenciar sons graves, médios e agudos pela escuta.",
+    titulo: "As sete notas musicais",
+    objetivo: "Conhecer os nomes das sete notas musicais e aprender sua sequência.",
     corpo: [
-      "🎵 Você já percebeu que alguns sons parecem mais grossos e outros mais finos? Essa diferença está relacionada à altura do som.",
-      "🔊 Sons graves possuem frequências mais baixas. Por exemplo, a voz grave de uma pessoa ou as notas mais baixas de uma tuba.",
-      "🎻 Sons agudos possuem frequências mais altas. Podemos perceber isso nas notas mais altas de um violino ou no canto agudo de alguns pássaros.",
-      "🎼 Sons médios ficam em uma região intermediária entre os graves e os agudos. Essa classificação depende da comparação e não possui limites únicos para todos os instrumentos.",
-      "💡 CURIOSIDADE: o mesmo instrumento pode produzir sons graves e agudos dentro de sua extensão musical.",
-      "🧪 EXPERIÊNCIA: cante uma nota confortável e depois tente cantar outra mais grave e outra mais aguda. Perceba a diferença entre elas."
+      "🎵 Na música, utilizamos sete nomes de notas: Dó, Ré, Mi, Fá, Sol, Lá e Si.",
+      "Esses nomes ajudam os músicos a identificar e organizar os sons musicais.",
+      "🎼 A sequência das notas é: Dó — Ré — Mi — Fá — Sol — Lá — Si.",
+      "Depois do Si, a sequência recomeça no Dó, em uma região mais aguda.",
+      "🎻 Também podemos percorrer a sequência ao contrário: Si — Lá — Sol — Fá — Mi — Ré — Dó.",
+      "💡 CURIOSIDADE: em outros países, as notas também podem ser representadas pelas letras C, D, E, F, G, A e B.",
+      "🧪 EXPERIÊNCIA: fale os nomes das sete notas em voz alta, primeiro na ordem normal e depois de trás para frente."
     ],
-    resumo: "A altura diferencia sons graves e agudos. Sons graves possuem frequências menores, sons agudos possuem frequências maiores e sons médios ficam em uma região intermediária.",
+    resumo: "As sete notas musicais são Dó, Ré, Mi, Fá, Sol, Lá e Si. Seus nomes se repetem em diferentes regiões de altura.",
     quiz: [
       {
-        q: "Qual propriedade do som permite distinguir graves e agudos?",
-        o: ["Intensidade", "Altura", "Duração"],
-        c: 1
-      },
-      {
-        q: "Um som grave geralmente possui:",
+        q: "Quais são as sete notas musicais?",
         o: [
-          "Frequência mais baixa",
-          "Frequência mais alta",
-          "Volume obrigatoriamente mais baixo"
+          "Dó, Ré, Mi, Fá, Sol, Lá e Si",
+          "Dó, Ré, Fá, Lá e Si",
+          "Sol, Lá, Dó e Ré"
         ],
         c: 0
       },
       {
-        q: "Um instrumento musical pode produzir sons graves e agudos?",
+        q: "Qual nota vem depois do Si na sequência ascendente?",
         o: [
-          "Não, cada instrumento produz apenas uma altura",
-          "Sim, dentro de sua extensão musical",
-          "Somente se estiver tocando muito forte"
+          "Lá",
+          "Dó",
+          "Fá"
+        ],
+        c: 1
+      },
+      {
+        q: "Qual nota vem imediatamente antes do Sol na sequência?",
+        o: [
+          "Lá",
+          "Mi",
+          "Fá"
+        ],
+        c: 2
+      },
+      {
+        q: "Qual letra representa a nota Dó no sistema de cifras?",
+        o: [
+          "A",
+          "C",
+          "D"
         ],
         c: 1
       }
