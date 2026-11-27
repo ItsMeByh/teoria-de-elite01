@@ -435,9 +435,42 @@ ${!S.admin ? `
       <div style="padding:12px">
         ${CURRICULO_NIVEL_1
           .filter(aula => aula.etapa === etapa.id)
-          .map(aula => `
-            <p>${String(aula.numero).padStart(2, "0")} — ${esc(aula.titulo)}</p>
-          `).join("")}
+        .map(aula => {
+  const pronta = AULAS_NIVEL_1.find(
+    a => a.numero === aula.numero
+  );
+
+  if (!pronta) {
+    return `
+      <p>
+        ${String(aula.numero).padStart(2, "0")} —
+        ${esc(aula.titulo)}
+        <small class="mute">🔒 Em preparação</small>
+      </p>
+    `;
+  }
+
+  return `
+    <details style="margin:10px 0;padding:12px;border:1px solid #888;border-radius:8px">
+      <summary style="cursor:pointer">
+        📖 ${String(aula.numero).padStart(2, "0")} —
+        ${esc(pronta.titulo)}
+      </summary>
+
+      <div style="padding-top:12px">
+        <p><b>🎯 Objetivo:</b> ${esc(pronta.objetivo)}</p>
+
+        ${pronta.corpo.map(paragrafo => `
+          <p>${esc(paragrafo)}</p>
+        `).join("")}
+
+        <p><b>📝 Resumo:</b> ${esc(pronta.resumo)}</p>
+
+        <p class="mute">Quiz em preparação.</p>
+      </div>
+    </details>
+  `;
+}).join("")}
       </div>
     </details>
   `).join("")}
