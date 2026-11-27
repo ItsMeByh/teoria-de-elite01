@@ -466,7 +466,22 @@ ${!S.admin ? `
 
         <p><b>📝 Resumo:</b> ${esc(pronta.resumo)}</p>
 
-        <p class="mute">Quiz em preparação.</p>
+    ${(pronta.quiz || []).map((pergunta, indice) => `
+  <div class="card" style="margin:12px 0;padding:12px">
+    <p><b>Questão ${indice + 1}:</b> ${esc(pergunta.q)}</p>
+
+    ${(pergunta.o || []).map((opcao, i) => `
+      <label style="display:block;margin:8px 0;cursor:pointer">
+        <input
+          type="radio"
+          name="quiz-novo-${pronta.numero}-${indice}"
+          value="${i}"
+        >
+        ${esc(opcao)}
+      </label>
+    `).join("")}
+  </div>
+`).join("")}
       </div>
     </details>
   `;
