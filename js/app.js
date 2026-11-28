@@ -629,6 +629,70 @@ ${l.id === 8 ? desenharPentagrama() : ""}
 <div class="card"><b>Resumo:</b> ${l.resumo}</div><p style="margin-top:22px">
 <button class="btn" id="concluir" data-act="concluir" ${feita || okq.size === l.quiz.length ? "" : "disabled"}>${feita ? "AULA CONCLUÍDA ✓" : "CONCLUIR AULA"}</button></p></section>`;
 }
+function aulaNivel1(id) {
+  const l = AULAS_NIVEL_1.find(x => x.numero == id);
+
+  if (!l) {
+    return `
+      <section class="pg">
+        <h2>Aula em preparação</h2>
+        <p class="mute">Esta aula ainda não possui conteúdo.</p>
+        <a class="btn" href="#/jornada">Voltar à jornada</a>
+      </section>
+    `;
+  }
+
+  const e = STAGES.find(x => x.id === l.etapa);
+
+  return `
+    <section class="pg">
+      <p class="mute">
+        Nível I · Etapa ${l.etapa} · Aula ${l.numero}
+      </p>
+
+      <h2>${esc(l.titulo)}</h2>
+
+      <p><b>🎯 Objetivo:</b> ${esc(l.objetivo)}</p>
+
+      <div class="card" style="margin:18px 0">
+        ${l.corpo.map(p => `
+          <p>${esc(p)}</p>
+        `).join("")}
+      </div>
+
+      <h3>📝 Quiz</h3>
+
+      ${(l.quiz || []).map((q, i) => `
+        <div class="q">
+          <p><b>Questão ${i + 1}:</b> ${esc(q.q)}</p>
+
+          ${q.o.map((opcao, j) => `
+            <label style="display:block;margin:10px 0">
+              <input
+                type="radio"
+                name="quiz-nivel1-${l.numero}-${i}"
+                value="${j}"
+              >
+              ${esc(opcao)}
+            </label>
+          `).join("")}
+        </div>
+      `).join("")}
+
+      <div class="card" style="margin:18px 0">
+        <b>📚 Resumo:</b> ${esc(l.resumo)}
+      </div>
+
+      <p class="mute">
+        Correção e conclusão da aula em desenvolvimento.
+      </p>
+
+      <a class="btn" href="#/jornada">
+        ← Voltar à jornada
+      </a>
+    </section>
+  `;
+}
 function responder(b) {
   const l = LESSONS.find(x => x.id == location.hash.split("/")[2]), i = +b.dataset.q, ok = +b.dataset.o === l.quiz[i].c;
   b.classList.add(ok ? "ok" : "err");
